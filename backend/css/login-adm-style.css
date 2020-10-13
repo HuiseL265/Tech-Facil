@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#container-login-adm{
+    margin:0 auto;
+    width:440px;
+}
+
+#container-foto{
+    width:100%;
+    margin:30% auto 0% auto;
+    display:flex;
+}
+
+#container-foto img{
+    width:350px;
+    margin:0 auto;
+}
+
+#login-container{
+    width:100%;
+    height:auto;
+    padding:0 43px 20px 43px;
+    margin-top:70px;
+    
+    border:1px solid #707070;
+    border-radius:20px;
+}
+
+    #login-container p{
+        margin-top:10px;
+
+        text-align: center;
+        font: normal normal 400 16px/21px Segoe UI;
+        letter-spacing: 0.16px;
+        color: #B5B5B5;
+        opacity: 1;
+    }
+
+        #login-container p a{
+            text-decoration: none;
+            color: #5589fa;
+        }
+
+.login-input-adm{
+    width:350px;
+    height:55px;
+    padding:15px;
+
+    margin:20px 0 0 0;
+
+    border:1px solid #707070;
+    border-radius:10px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    color: #535353;
+    text-align:left;
+}
+
+#btnEntrar-adm{
+    width: 350px;
+    height: 55px;
+    margin-top:25px;
+    background: #4886c0 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+
+    text-align: center;
+    font: normal normal bold 20px/27px Segoe UI;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+    #btnEntrar-adm:hover{
+        background: #376b9b;
+        cursor: pointer;
+    }
+
+
+#msgLogin{
+    color:#9b3737 !important;
+    font-weight: bold !important;
+    margin-bottom: -10px;
+}
