@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login-Tech Facil</title>
 
-    <link rel="stylesheet" href="css/login-adm-style.css">
+    <link rel="stylesheet" href="../css/CssBackend/login-adm-style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
