@@ -1,0 +1,63 @@
+*{
+    font-family:verdana;
+}
+
+body{
+    background-color:#808080;
+}
+
+.table-usuarios-ver table{
+    margin: 100px auto;
+    width:auto;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(196, 196, 196, 1);
+    box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+    overflow:hidden;
+}
+
+.table-usuarios-ver table tr:first-child {
+box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.table-usuarios-ver th {
+font-size: 16px;
+color: rgb(2, 108, 122);
+line-height: 1.5;
+
+background-color: transparent;
+}
+
+.table-usuarios-ver tr:nth-child(2n+3) {
+    background-color: rgb(226, 226, 226);
+}
+
+
+.table-usuarios-ver td {
+font-size: 14px;
+color: #808080;
+line-height: 2.5;
+text-align:center;
+overflow:hidden;
+
+padding:0 10px 0 10px;
+}
+
+.table-usuarios-ver .usuario-info:hover{
+    cursor:pointer;
+}
+
+.status-ver{
+    font-weight: bold;
+}
+
+.status-green{
+    color:rgb(0, 128, 0) !important;
+}
+
+.status-orange{
+    color:rgb(230, 156, 20) !important;
+}
+
+.status-red{
+    color:rgb(194, 7, 7) !important;
+}

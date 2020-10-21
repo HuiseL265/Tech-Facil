@@ -13,18 +13,18 @@ if($query->num_rows == 1){
     
     if($senha == $query['senha']){
         $_SESSION['email'] = $email;
-        header("location:./home-adm");
+        header("location:../pages/home-adm");
         exit();
     }else{
         //senha invalida
-        header("location:./login-adm?resp=1");
+        header("location:../pages/login-adm?resp=1");
         exit();
     }   
     
 }else{
     $_SESSION['sem_cadastro']=true;
     //usuario não encontrado através do email
-    header("location:./login-adm?resp=2");
+    header("location:../pages/login-adm?resp=2");
     exit();
 }
 
