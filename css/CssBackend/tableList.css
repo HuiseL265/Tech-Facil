@@ -1,0 +1,22 @@
+.tableContainer {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+
+    
+}
+
+.tableContainer table {
+    width:auto;
+    background-color: rgb(244, 244, 245);
+    text-align: center;
+}
+
+.tableContainer table th{
+    background-color: rgb(133, 133, 134);
+    padding: 5px;
+}
+
+.tableContainer table td{
+    padding: 5px;
+}

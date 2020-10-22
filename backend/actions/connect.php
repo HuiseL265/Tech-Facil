@@ -1,6 +1,6 @@
 <?php
 
-$con = mysqli_connect("localhost","root","");
+$con = mysqli_connect("localhost:3308","root","");
 
 if(!$con){
     echo "<b>Erro</b>: Não foi possível se conectar ao banco." . PHP_EOL;
