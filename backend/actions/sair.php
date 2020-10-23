@@ -2,5 +2,5 @@
 session_start();
 
 session_destroy();
-header('location:./login-adm.php');
+header('location:../pages/login-adm.php');
 ?>

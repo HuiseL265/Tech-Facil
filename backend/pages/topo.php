@@ -24,15 +24,11 @@
             opcoesUsuario = document.getElementById("opcoes-logado-adm");
             
             logado.addEventListener("click", function(){ 
-                if(opcoesUsuario.style.display == "none"){
-                    opcoesUsuario.style.display = "flex";
-                }else{
-                    opcoesUsuario.style.display = "none";
-                }
+                $('#opcoes-logado-adm').toggleClass('opcoes-logado-adm-enabled');
             });
 
             exitBtn.addEventListener("click",function(){
-                window.location.href = "sair.php";
+                window.location.href = "../actions/sair.php";
             });
 
         };
@@ -42,9 +38,10 @@
     
     <div id="container-topo">
         <ul id="nav-topo">
-            <li> Home</li>
-            <li>Usuários</li>
-            <li>Freelancers</li>
+            <li><a href="home-adm.php">Home</a></li>
+            <li><a href="listarUsers.php">Usuários</a></li>
+            <li><a href="listarFreelancers.php">Freelancers</a></li>
+            <li><a href="verificarUsuarios.php">Verificar Usuários</a></li>
         </ul>
 
         <div id="logado-adm">

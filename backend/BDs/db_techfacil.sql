@@ -31,12 +31,12 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `tb_administradores`;
 CREATE TABLE IF NOT EXISTS `tb_administradores` (
   `idAdm` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `senha` varchar(40) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `cpf` varchar(15) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `nome` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `senha` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `cpf` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`idAdm`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Tabela para controle de acesso de administradores.';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Tabela para controle de acesso de administradores.';
 
 --
 -- Extraindo dados da tabela `tb_administradores`

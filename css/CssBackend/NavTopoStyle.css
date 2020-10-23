@@ -25,9 +25,9 @@
 #container-topo #nav-topo li{
     display:inline-block;
     padding-top:15px;
-    margin-right:35px;
+    margin-right:40px;
 
-    width:100px;
+    width:auto;
 
     color:azure;
     font-size: 18px;
@@ -36,11 +36,16 @@
     text-align:center;
 }
 
-    #container-topo #nav-topo li:hover{
+#nav-topo li a{
+    text-decoration:none;
+    color:white;
+    margin:0;
+}
+
+    #container-topo #nav-topo li a:hover{
         color:rgb(184, 184, 184);
         cursor:pointer;
     }
-
 
 #logado-adm{
     display:flex;
@@ -69,24 +74,42 @@
 }
 
 #opcoes-logado-adm{
-    display:none;
-    margin-top:65px;
+    margin-top:0px;
     position:fixed;
-    
-    width:100px;
-    height:auto;
+
+    width:160px;
+    height:40px;
+    right:45px;
+    z-index: -1;
+
+    border-radius:0px 0px 10px 10px;
+
+    background-color:rgb(83, 83, 83);
+
+    justify-self: right;
+
+    transition: margin-top 0.5s ease-in;
 }
 
-#opcoes-logado-adm ul{
-    width:100%;
+.opcoes-logado-adm-enabled{
+    margin-top:95px !important;
 }
 
 #opcoes-logado-adm ul li{
     list-style-type: none;
-    width:100%;
+    width:160px;
+    padding-right:20px;
+    margin-top:5px;
+    text-align:right;
+
+
+    color:white;
+    font-weight: bold;   
 }
 
 #opcoes-logado-adm ul li:hover{
     list-style-type: none;
+    background-color:rgb(63, 63, 63);
     cursor:pointer;
 }
+

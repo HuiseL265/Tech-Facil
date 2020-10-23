@@ -18,7 +18,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar Freelancers</title>
 
-    <link rel="stylesheet" href="../../css/cssBackend/NavTopoStyle.css">
     <link rel="stylesheet" href="../../css/cssBackend/main.css">
     <link rel="stylesheet" href="../../css/cssBackend/tableList.css">
 

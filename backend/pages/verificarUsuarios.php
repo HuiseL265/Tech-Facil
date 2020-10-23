@@ -1,9 +1,14 @@
 <?php
- session_start();
+
+require('../actions/connect.php');
+
+include("topo.php");
 
  if(!isset($_SESSION['nomeAdm'])){
     header('location:./login-adm.php');
  };
+
+ 
 ?>
 
 <!DOCTYPE html>
@@ -13,24 +18,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="../../css/cssBackend/NavTopoStyle.css">
     <link rel="stylesheet" href="../../css/cssBackend/verificacoes-style.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         window.onload = function() {
 
-            logado = document.getElementById("logado-adm");
             exitBtn = document.getElementById("deslogar-adm");
-            opcoesUsuario = document.getElementById("opcoes-logado-adm");
-            
-            logado.addEventListener("click", function(){ 
-                if(opcoesUsuario.style.display == "none"){
-                    opcoesUsuario.style.display = "flex";
-                }else{
-                    opcoesUsuario.style.display = "none";
-                }
-            });
 
             exitBtn.addEventListener("click",function(){
                 window.location.href = "sair.php";
@@ -64,30 +57,8 @@
 </head>
 <body>
     
-    <div id="container-topo">
-        <ul id="nav-topo">
-            <li>Home</li>
-            <li>Usuários</li>
-        </ul>
-
-        <div id="logado-adm">
-            <p>
-                <?php echo $_SESSION['nomeAdm'] ?>
-            </p>
-
-            <div id="logado-foto"></div>
-
-            <div id="opcoes-logado-adm">
-                <ul>
-                    <li id="deslogar-adm">Sair</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
     <?php
-    require('../actions/connect.php');
-    
+        
     if(!$usuarios = mysqli_query($con, "SELECT * FROM `tb_adminssistradores`")){
         //echo "Erro, não foi possível extrair os dados da tabela";
         error_reporting(E_ERROR | E_PARSE);
