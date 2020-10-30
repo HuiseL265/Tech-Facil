@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: url('/img/DeveloperBackground.jpg');
+    background-color: hsla(205, 100%, 20%, 0.99);
 }
 .header{
     
