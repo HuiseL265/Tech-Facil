@@ -1,0 +1,125 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-image: url('/img/DeveloperBackground.jpg');
+}
+.header{
+    
+}
+
+.info{
+    width: 1000px;
+    height: 500px;
+    position: fixed;
+    top: 20%;
+    left: 100px;
+
+    background-color: hsla(205, 100%, 20%, 0.83);
+    border-radius: 15px;
+}
+
+.info p{
+    font-size: 30px;
+    color: white;
+}
+
+.info img{
+    width: 1000px;
+    border-radius: 10px;
+    opacity: 0.8;
+
+}
+
+.form-registrar{
+    position: fixed;
+    top: 20%;
+    right: 300px;
+    
+    width: 500px;
+    height: 500px;
+}
+
+
+
+/* CODIGO DO ALANZINHO */
+
+.items{
+    float:right;
+    width:380px;
+    height:450px;
+    border-radius:10px;
+    background-color:rgba(46, 46, 46,1);	
+
+    display:flex;
+}
+    .items table{
+        margin:auto;
+        border-collapse: separate;
+        border-spacing: 0 10px;
+        display:flex;
+    }
+
+.items table h2{
+    text-align: center;
+    text-shadow: 1.5px 1.5px 3px #51af3f;
+    font-size:50px;
+    text-decoration:line;
+}
+
+tr td:first-child{
+    font-size:20px;
+    text-align:right;
+    font-weight: bold;
+    color:white;
+}
+
+td input{
+  width: 200px;
+  outline: 0;
+  border: 0;
+  font-size: 20px;
+  padding: 5px 0 5px 0;
+  border-radius: 10px;
+}
+
+.items a{
+    float:left;
+    color: #808080;
+    font-weight: bold;
+    text-decoration:none;
+    margin:auto;
+
+}
+.items a:hover{
+        text-decoration: underline;
+    }
+        #confirm{
+            right:2%;
+            position:relative;
+            color:black;
+            background: #33df7a;
+
+            width: 180px;
+            height: 45px;
+
+            border-radius: 5px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            box-shadow:0px 4px 16px rgba(7, 206, 83, 0.185);
+
+            margin:0;
+        }
+
+            #confirm:hover{
+                background-color: #ffffff;
+                text-decoration:none;
+                cursor: pointer;
+        
+            }
