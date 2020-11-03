@@ -14,6 +14,7 @@
 
     display:flex;
     justify-content: space-between;
+    box-shadow: 1px 1px 5px rgb(12, 12, 14);
 }
 
 #container-topo #nav-topo{
@@ -43,7 +44,7 @@
 }
 
     #container-topo #nav-topo li a:hover{
-        color:rgb(184, 184, 184);
+        color:rgb(68, 129, 185);
         cursor:pointer;
     }
 

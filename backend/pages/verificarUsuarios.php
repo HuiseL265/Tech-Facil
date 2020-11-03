@@ -1,6 +1,7 @@
 <?php
 
-require('../actions/connect.php');
+//require('../actions/connect.php');
+require("../actions/SQL Server/connect_sql.php");
 
 include("topo.php");
 
@@ -18,7 +19,7 @@ include("topo.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="../../css/cssBackend/verificacoes-style.css">
+    <link rel="stylesheet" href="../../css/cssBackend/tableUsers.css">
 
     <script>
         window.onload = function() {
@@ -59,44 +60,42 @@ include("topo.php");
     
     <?php
         
-    if(!$usuarios = mysqli_query($con, "SELECT * FROM `tb_adminssistradores`")){
-        //echo "Erro, não foi possível extrair os dados da tabela";
+    if(!$prestadores = sqlsrv_query($con, "SELECT * FROM Tb_Verificacao
+    INNER JOIN Tb_PrestadorDeServico
+    ON Tb_PrestadorDeServico.idVerificacao = Tb_Verificacao.idVerificacao
+    LEFT JOIN Tb_Usuario
+    ON Tb_Usuario.idUsuario = Tb_PrestadorDeServico.idUsuario")){
+        echo "Erro, não foi possível extrair os dados da tabela";
         error_reporting(E_ERROR | E_PARSE);
-    }
-    
-    //criação dos identificados das colunas
-    echo   "<div class='table-usuarios-ver'>
-            <table>
-            <tr>
-                <th>ID</th>
-                <th>Status</th>
-                <th>Nome</th>               
-            </tr>";
-    
-    //realiza a inserção de dados enquanto houver registros.
-    //while($usuario = mysqli_fetch_array($usuarios)){
-        echo "<tr class=usuario-info>";
-            echo "<td class=id-ver> 01 </td>";                
-            echo "<td class=status-ver>Confirmado</td>";
-            echo "<td class=nome-ver> Vitor Pereira </td>";   
+    }else{
+
+     //criação dos identificados das colunas
+    echo   "<div class='table-list'>
+    <table>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>CPF</th>               
+        <th>STATUS</th>               
+    </tr>";
+
+        //realiza a inserção de dados enquanto houver registros.
+        while($prestador = sqlsrv_fetch_array($prestadores, SQLSRV_FETCH_ASSOC)){
+        echo "<tr class=table-info>";
+            echo "<td class=id-ver style=width:60px;> ". $prestador['idPrestador'] ." </td>";                
+            echo "<td class=nome-ver style=width:200px;>". $prestador['Nome'] ."</td>";
+            echo "<td> ". $prestador['CPF'] ." </td>";  
+            echo "<td class=status-ver style=font-weight:bold;width:100px;>Pendente</td>"; 
         echo "</tr>"; 
+        }
 
-        echo "<tr class=usuario-info>";
-            echo "<td class=id-ver> 02 </td>";                
-            echo "<td class=status-ver>Pendente</td>";
-            echo "<td class=nome-ver> Thiago Frederico </td>";   
-        echo "</tr>";
-
-        echo "<tr class=usuario-info>";
-            echo "<td class=id-ver> 03 </td>";                
-            echo "<td class=status-ver>Negado</td>";
-            echo "<td class=nome-ver> Luiz Gustavo </td>";   
-        echo "</tr>";
-    //}
     echo "</table>";
-    echo "</div>";
+    echo "</div>";   
+    }
 
     ?>
+
+    <div class="popup-ver"></div>
 
 </body>
 </html>

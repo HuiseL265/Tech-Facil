@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="../../css/cssBackend/NavTopoStyle.css">
+    <link rel="stylesheet" href="../../css/cssBackend/topo.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -41,7 +41,7 @@
             <li><a href="home-adm.php">Home</a></li>
             <li><a href="listarUsers.php">Usuários</a></li>
             <li><a href="listarFreelancers.php">Freelancers</a></li>
-            <li><a href="verificarUsuarios.php">Verificar Usuários</a></li>
+            <li><a href="verificarUsuarios.php">Verificar FL</a></li>
         </ul>
 
         <div id="logado-adm">

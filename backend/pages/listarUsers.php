@@ -20,11 +20,11 @@
     <title>Listar Usuários</title>
 
     <link rel="stylesheet" href="../../css/cssBackend/main.css">
-    <link rel="stylesheet" href="../../css/cssBackend/tableList.css">
+    <link rel="stylesheet" href="../../css/cssBackend/tableUsers.css">
 
 </head>
 <body>
-    <div class="tableContainer">
+    <div class="table-list">
         <table>
             <tr>
                 <th>ID</th>
@@ -33,7 +33,7 @@
                 <th>CPF</th>
             </tr>
             <?php while ($user = mysqli_fetch_array($infoUsers) ) { ?>
-            <tr>
+            <tr class="table-info">
                 <td><?php echo $user['idUsuario'] ?></td>
                 <td><?php echo $user['nome'] ?></td>
                 <td><?php echo $user['email'] ?></td>

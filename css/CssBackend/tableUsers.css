@@ -1,39 +1,47 @@
 
-body{
-    background-color:#808080;
-}
-
-.table-usuarios-ver table{
+.table-list table{
     margin: 100px auto;
     width:auto;
+    border-radius:5px;
+
     background-color: white;
     box-shadow: 0px 0px 5px rgba(196, 196, 196, 1);
     box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
     overflow:hidden;
 
     font-family:verdana;
+    border-spacing: 0px;
 }
 
-.table-usuarios-ver table tr:first-child {
+.table-list table tr:first-child {
 box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.1);
+background-color:#335fb1;
+
 }
 
-.table-usuarios-ver th {
+
+.table-list th {
 font-size: 16px;
-color: rgb(2, 108, 122);
-line-height: 1.5;
+text-transform: uppercase;
+color: rgb(255, 255, 255);
+
+line-height: 1.8;
 
 background-color: transparent;
 }
 
-.table-usuarios-ver tr:nth-child(2n+3) {
-    background-color: rgb(226, 226, 226);
+.table-list tr:nth-child(2n+3) {
+    background-color: rgb(238, 238, 238);
 }
 
 
-.table-usuarios-ver td {
+.table-list tr:hover{
+    background-color: #d6deff;
+}
+
+.table-list td {
 font-size: 14px;
-color: #808080;
+color: #727272;
 line-height: 2.5;
 text-align:center;
 overflow:hidden;
@@ -41,12 +49,8 @@ overflow:hidden;
 padding:0 10px 0 10px;
 }
 
-.table-usuarios-ver .usuario-info:hover{
+.table-list .table-info:hover{
     cursor:pointer;
-}
-
-.status-ver{
-    font-weight: bold;
 }
 
 .status-green{

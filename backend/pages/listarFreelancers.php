@@ -23,7 +23,7 @@
 
 </head>
 <body>
-    <div class="tableContainer">
+    <div class="table-list">
         <table>
             <tr>
                 <th>ID</th>
@@ -32,7 +32,7 @@
                 <th>CPF</th>
             </tr>
             <?php while ($freela = mysqli_fetch_array($infoFreelancers) ) { ?>
-            <tr>
+            <tr class="table-info">
                 <td><?php echo $freela['idUsuario'] ?></td>
                 <td><?php echo $freela['nome'] ?></td>
                 <td><?php echo $freela['email'] ?></td>
