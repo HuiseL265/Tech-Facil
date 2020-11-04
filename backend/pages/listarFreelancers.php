@@ -1,13 +1,7 @@
 <?php
-    //session_start();
     require('../actions/connect.php');
-    include('topo.php');
 
     $infoFreelancers = mysqli_query($con, "SELECT * FROM `tb_prestador`");
-
-    if(!isset($_SESSION['nomeAdm'])){
-       header('location:./login-adm.php');
-    };
     
 ?>
 
@@ -18,11 +12,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar Freelancers</title>
 
+    <link rel="stylesheet" href="../../css/cssBackend/topo.css">
     <link rel="stylesheet" href="../../css/cssBackend/main.css">
     <link rel="stylesheet" href="../../css/cssBackend/tableList.css">
 
 </head>
 <body>
+
+<?php
+include('topo.php');
+?>
+
     <div class="table-list">
         <table>
             <tr>

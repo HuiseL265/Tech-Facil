@@ -1,12 +1,3 @@
-<?php
- //session_start();
- include('topo.php');
-
- if(!isset($_SESSION['nomeAdm'])){
-    header('location:./login-adm.php');
- };
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="../../css/cssBackend/topo.css">
+
 
 </head>
 <body>
+<?php
+ include('topo.php');
+?>
     
     
 

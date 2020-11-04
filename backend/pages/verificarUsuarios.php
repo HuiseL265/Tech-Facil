@@ -1,15 +1,5 @@
 <?php
-
-//require('../actions/connect.php');
-require("../actions/SQL Server/connect_sql.php");
-
-include("topo.php");
-
- if(!isset($_SESSION['nomeAdm'])){
-    header('location:./login-adm.php');
- };
-
- 
+require("../actions/SQL Server/connectsql.php");
 ?>
 
 <!DOCTYPE html>
@@ -17,10 +7,11 @@ include("topo.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Verificar Usuarios</title>
 
+    <link rel="stylesheet" href="../../css/cssBackend/topo.css">
     <link rel="stylesheet" href="../../css/cssBackend/tableUsers.css">
-
+    
     <script>
         window.onload = function() {
 
@@ -47,16 +38,16 @@ include("topo.php");
                     element.classList.add("status-green");
                     break;
                 }
-
-                /*if(element.innerHTML == "Pendente"){
-                    element.classList.add("status-orange");
-                }*/
             });
 
         };
     </script>
 </head>
 <body>
+
+<?php
+include("topo.php");
+?>
     
     <?php
         
