@@ -96,6 +96,10 @@
     margin-top:95px !important;
 }
 
+.showin-opcoes-logado-adm-enabled{
+    z-index: 10 !important;
+}
+
 #opcoes-logado-adm ul li{
     list-style-type: none;
     width:160px;

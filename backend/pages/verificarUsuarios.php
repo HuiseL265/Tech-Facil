@@ -11,6 +11,7 @@ require("../actions/SQL Server/connectsql.php");
 
     <link rel="stylesheet" href="../../css/cssBackend/topo.css">
     <link rel="stylesheet" href="../../css/cssBackend/tableUsers.css">
+    <link rel="stylesheet" href="../../css/cssBackend/verifyUsers.css">
     
     <script>
         window.onload = function() {
@@ -63,7 +64,7 @@ include("topo.php");
      //criação dos identificados das colunas
     echo   "<div class='table-list'>
     <table>
-    <tr>
+    <tr style=background-color:#3aa47e;>
         <th>ID</th>
         <th>Nome</th>
         <th>CPF</th>               
@@ -73,8 +74,8 @@ include("topo.php");
         //realiza a inserção de dados enquanto houver registros.
         while($prestador = sqlsrv_fetch_array($prestadores, SQLSRV_FETCH_ASSOC)){
         echo "<tr class=table-info>";
-            echo "<td class=id-ver style=width:60px;> ". $prestador['idPrestador'] ." </td>";                
-            echo "<td class=nome-ver style=width:200px;>". $prestador['Nome'] ."</td>";
+            echo "<td class=id-ver> ". $prestador['idPrestador'] ." </td>";                
+            echo "<td class=nome-ver style=width:150px;>". $prestador['Nome'] ."</td>";
             echo "<td> ". $prestador['CPF'] ." </td>";  
             echo "<td class=status-ver style=font-weight:bold;width:100px;>Pendente</td>"; 
         echo "</tr>"; 
@@ -86,7 +87,9 @@ include("topo.php");
 
     ?>
 
-    <div class="popup-ver"></div>
+    <div class="popup-ver">
+
+    </div>
 
 </body>
 </html>

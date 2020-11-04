@@ -1,18 +1,20 @@
 <?php
 session_start();
-require('connect.php');
+require('SQL Server/connectsql.php');
 $email = $_POST['email-adm'];
 $senha = md5($_POST['senha-adm']);
+$params = array();
+$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
 
-$query = mysqli_query($con,"SELECT * FROM `tb_administradores` where `email` = '$email'; " );
+$query = sqlsrv_query($con,"SELECT * FROM Tb_Usuario WHERE Email = 'vitor.per55@gmail.com' AND tipoUsuario = 'adm'", $params, $options);
 
-if($query->num_rows == 1){
-    $query = mysqli_fetch_array($query);
-    $_SESSION['nomeAdm'] = $query['nome'];
-    echo $_SESSION['idAdm'] = $query['idAdm'];
+if(sqlsrv_num_rows($query) == 1){
+    $query = sqlsrv_fetch_array($query, SQLSRV_FETCH_ASSOC);
+    $_SESSION['Nome'] = $query['Nome'];
+    $_SESSION['id'] = $query['idUsuario'];
     
-    if($senha == $query['senha']){
-        $_SESSION['email'] = $email;
+    if($senha == $query['Senha']){
+        $_SESSION['Email'] = $email;
         header("location:../pages/home-adm");
         exit();
     }else{
@@ -25,6 +27,7 @@ if($query->num_rows == 1){
     $_SESSION['sem_cadastro']=true;
     //usuario não encontrado através do email
     header("location:../pages/login-adm?resp=2");
+    echo "usuario não encontrado através do email";
     exit();
 }
 

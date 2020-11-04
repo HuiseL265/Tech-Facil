@@ -1,7 +1,7 @@
 <?php
-    require('../actions/connect.php');
+    require('../actions/SQL Server/connectsql.php');
 
-    $infoFreelancers = mysqli_query($con, "SELECT * FROM `tb_prestador`");
+    
     
 ?>
 
@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="../../css/cssBackend/topo.css">
     <link rel="stylesheet" href="../../css/cssBackend/main.css">
-    <link rel="stylesheet" href="../../css/cssBackend/tableList.css">
+    <link rel="stylesheet" href="../../css/cssBackend/tableUsers.css">
 
 </head>
 <body>
@@ -25,20 +25,33 @@ include('topo.php');
 
     <div class="table-list">
         <table>
-            <tr>
+            <tr style="background-color:#3a3ba4;">
                 <th>ID</th>
                 <th>NOME</th>
                 <th>EMAIL</th>
                 <th>CPF</th>
             </tr>
-            <?php while ($freela = mysqli_fetch_array($infoFreelancers) ) { ?>
+            <?php
+            if(!$infoFreelancers = sqlsrv_query($con, "SELECT 
+            Tb_PrestadorDeServico.idPrestador as ID_Prestador,
+            Tb_Usuario.Nome,
+            Tb_Usuario.CPF,
+            Tb_Usuario.Email,
+            Tb_Usuario.dataCriacao as DataDeCriacao
+            FROM Tb_PrestadorDeServico
+            LEFT JOIN Tb_Usuario
+            ON Tb_Usuario.idUsuario = Tb_PrestadorDeServico.idUsuario")){
+                echo "erro na query";
+            }else{
+        
+            while ($freela = sqlsrv_fetch_array($infoFreelancers, SQLSRV_FETCH_ASSOC)){ ?>
             <tr class="table-info">
-                <td><?php echo $freela['idUsuario'] ?></td>
-                <td><?php echo $freela['nome'] ?></td>
-                <td><?php echo $freela['email'] ?></td>
-                <td><?php echo $freela['cpf'] ?></td>
+                <td><?php echo $freela['ID_Prestador'] ?></td>
+                <td><?php echo $freela['Nome'] ?></td>
+                <td><?php echo $freela['Email'] ?></td>
+                <td><?php echo $freela['CPF'] ?></td>
             </tr>  
-            <?php } ?>
+            <?php } }?>
             
         </table>
     </div>

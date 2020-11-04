@@ -2,7 +2,7 @@
         require('../actions/SQL Server/connectsql.php');
         session_start();
 
-        if(!isset($_SESSION['nomeAdm'])){
+        if(!isset($_SESSION['Nome'])){
             header('location:./login-adm.php');
          };
     ?>
@@ -16,7 +16,7 @@
 
         <div id="logado-adm">
             <p>
-                <?php echo $_SESSION['nomeAdm'] ?>
+                <?php echo $_SESSION['Nome'] ?>
             </p>
 
             <div id="logado-foto"></div>
@@ -29,6 +29,7 @@
         </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         window.onload = function() {
 
@@ -38,6 +39,14 @@
             
             logado.addEventListener("click", function(){ 
                 $('#opcoes-logado-adm').toggleClass('opcoes-logado-adm-enabled');
+
+                if(!$(".showin-opcoes-logado-adm-enabled")[0]){
+                    setTimeout(() => {
+                    $('#opcoes-logado-adm').toggleClass('showin-opcoes-logado-adm-enabled');
+                }, 600);
+                }else{
+                    $('#opcoes-logado-adm').toggleClass('showin-opcoes-logado-adm-enabled');
+                }
             });
 
             exitBtn.addEventListener("click",function(){

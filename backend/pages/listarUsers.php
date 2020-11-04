@@ -1,7 +1,5 @@
 <?php
-    include('topo.php');
-
-    $infoUsers = sqlsrv_query($con, "SELECT * FROM `Tb_Usuario`");   
+    include('topo.php'); 
 ?>
 
 <!DOCTYPE html>
@@ -25,14 +23,20 @@
                 <th>EMAIL</th>
                 <th>CPF</th>
             </tr>
-            <?php while ($user = sqlsrv_fetch_array($infoUsers) ) { ?>
-            <tr class="table-info">
-                <td><?php echo $user['idUsuario'] ?></td>
-                <td><?php echo $user['nome'] ?></td>
-                <td><?php echo $user['email'] ?></td>
-                <td><?php echo $user['cpf'] ?></td>
-            </tr>  
-            <?php } ?>
+            <?php 
+            if(!$infoUsers = sqlsrv_query($con, "SELECT * FROM Tb_Usuario")){
+                echo "erro na query";
+            }else{
+                while ($user = sqlsrv_fetch_array($infoUsers, SQLSRV_FETCH_ASSOC)){ ?>
+            
+                <tr class="table-info">
+                    <td><?php echo $user['idUsuario'] ?></td>
+                    <td><?php echo $user['Nome'] ?></td>
+                    <td><?php echo $user['Email'] ?></td>
+                    <td><?php echo $user['CPF'] ?></td>
+                </tr>  
+
+            <?php } } ?>
             
         </table>
     </div>
