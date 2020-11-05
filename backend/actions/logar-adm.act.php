@@ -6,7 +6,7 @@ $senha = md5($_POST['senha-adm']);
 $params = array();
 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
 
-$query = sqlsrv_query($con,"SELECT * FROM Tb_Usuario WHERE Email = 'vitor.per55@gmail.com' AND tipoUsuario = 'adm'", $params, $options);
+$query = sqlsrv_query($con,"SELECT * FROM Tb_Usuario WHERE Email = '$email' AND tipoUsuario = 'adm'", $params, $options);
 
 if(sqlsrv_num_rows($query) == 1){
     $query = sqlsrv_fetch_array($query, SQLSRV_FETCH_ASSOC);
