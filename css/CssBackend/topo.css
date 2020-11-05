@@ -15,6 +15,7 @@
     display:flex;
     justify-content: space-between;
     box-shadow: 1px 1px 5px rgb(12, 12, 14);
+    z-index:11 !important;
 }
 
 #container-topo #nav-topo{

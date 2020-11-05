@@ -42,6 +42,26 @@ require("../actions/SQL Server/connectsql.php");
             });
 
         };
+
+        function slcPrestador(id){
+            document.getElementById("popup-ver").style.display = "grid";
+            
+            var nome = document.querySelector("#prestador"+id+" .nome-ver").innerHTML;
+            var status = document.querySelector("#prestador"+id+" .status-ver").innerHTML;
+            var email = document.querySelector("#prestador"+id+" .email-ver").innerHTML;
+            var cpf = document.querySelector("#prestador"+id+" .cpf-ver").innerHTML;
+
+                document.querySelector(".nome-prest").innerHTML = nome;
+                document.querySelector(".status-prest").innerHTML = status;
+
+                document.querySelector("#info-prest #nome-prest").innerHTML = nome;
+                document.querySelector("#info-prest #email-prest").innerHTML = email;
+                document.querySelector("#info-prest #cpf-prest").innerHTML = cpf;
+
+            nome = nome.split(" ");
+            document.querySelector("#foto-prest img").src = "../../img/prestadores/ver_" + id + nome[0] + ".png";
+        }
+
     </script>
 </head>
 <body>
@@ -56,7 +76,9 @@ include("topo.php");
     INNER JOIN Tb_PrestadorDeServico
     ON Tb_PrestadorDeServico.idVerificacao = Tb_Verificacao.idVerificacao
     LEFT JOIN Tb_Usuario
-    ON Tb_Usuario.idUsuario = Tb_PrestadorDeServico.idUsuario")){
+    ON Tb_Usuario.idUsuario = Tb_PrestadorDeServico.idUsuario
+    LEFT JOIN Tb_Contato
+    ON Tb_Usuario.idUsuario = Tb_Contato.idUsuario")){
         echo "Erro, não foi possível extrair os dados da tabela";
         error_reporting(E_ERROR | E_PARSE);
     }else{
@@ -73,11 +95,13 @@ include("topo.php");
 
         //realiza a inserção de dados enquanto houver registros.
         while($prestador = sqlsrv_fetch_array($prestadores, SQLSRV_FETCH_ASSOC)){
-        echo "<tr class=table-info>";
+        echo "<tr class=table-info onclick=slcPrestador(". $prestador['idPrestador'] .") id=prestador".$prestador['idPrestador'].">";
             echo "<td class=id-ver> ". $prestador['idPrestador'] ." </td>";                
             echo "<td class=nome-ver style=width:150px;>". $prestador['Nome'] ."</td>";
-            echo "<td> ". $prestador['CPF'] ." </td>";  
-            echo "<td class=status-ver style=font-weight:bold;width:100px;>Pendente</td>"; 
+            echo "<td class=cpf-ver> ". $prestador['CPF'] ." </td>";  
+            echo "<td class=status-ver style=font-weight:bold;width:100px;>". $prestador['Status'] ."</td>"; 
+            
+            echo "<td class='no-see email-ver'>". $prestador['Email'] ."</td>";
         echo "</tr>"; 
         }
 
@@ -87,8 +111,30 @@ include("topo.php");
 
     ?>
 
-    <div class="popup-ver">
+    <div id="popup-ver">
+        <div id="foto-prest">
+            <img src="" alt="foto do prestador">
+            <p class="nome-prest" style="font-weight: bold;"></p>
+            <p class="status-prest" style="text-transform: capitalize;"></p>
+        </div>
+        <div id="info-prest">
+            <table>
+                <tr>
+                    <td>Nome: </td>
+                    <td><p id="nome-prest"></p></td>                    
+                </tr>
 
+                <tr>
+                    <td>Email: </td>
+                    <td><p id="email-prest"></p></td>                    
+                </tr>
+
+                <tr>
+                    <td>CPF: </td>
+                    <td><p id="cpf-prest"></p></td>                    
+                </tr>
+            </table>            
+        </div>
     </div>
 
 </body>
