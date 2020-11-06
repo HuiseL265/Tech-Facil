@@ -1,4 +1,5 @@
 <?php 
+
 require('SQL Server/connectsql.php');
 extract($_POST);
 $params = array();
@@ -7,6 +8,7 @@ $data = date("Y-m-d");
 
 $verEmail = sqlsrv_query($con, "SELECT * FROM Tb_Usuario WHERE Email = '$email'", $params, $options);
 $verCpf = sqlsrv_query($con, "SELECT * FROM Tb_Usuario WHERE CPF = '$cpf'", $params, $options);
+
 
 if (!$con) {
     die(print_r(sqlsrv_errors(),true));
@@ -20,11 +22,26 @@ if (sqlsrv_num_rows($verEmail) === 1) {
     return;
 }
 
-if ($senha === $senha2) {
+if ($senha === $confsenha) {
     $senha = md5($senha);
+
+    if($tipoUser != "" and $tipoUser != null){
     sqlsrv_query($con, "INSERT INTO Tb_Usuario (Nome, CPF, Email, Senha, dataCriacao, tipoUsuario)
     VALUES('$nome', '$cpf', '$email', '$senha', '$data', '$tipoUser') ");
     echo "Redireciona para página principal";
+
+    $usuario_query = sqlsrv_query($con, "SELECT * FROM Tb_Usuario WHERE Email = '$email'");
+
+    $usuario = sqlsrv_fetch_array($usuario_query, SQLSRV_FETCH_ASSOC);
+    
+    
+    if($tipoUser == "Prestador"){  
+        sqlsrv_query($con, "INSERT INTO Tb_PrestadorDeServico (idUsuario) VALUES ($usuario[idUsuario])");
+    }else{
+        sqlsrv_query($con, "INSERT INTO Tb_Contratante (idUsuario) VALUES ($usuario[idUsuario])");
+    }
+   
+    }
 }
 
 ?>

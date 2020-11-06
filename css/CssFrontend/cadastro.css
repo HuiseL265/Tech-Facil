@@ -1,0 +1,306 @@
+* {
+    margin: 1px;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 0;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+h2 {
+    top: 210px;
+    text-align: center;
+    height: 44px;
+    font: normal normal 600 33px/44px Segoe UI;
+    letter-spacing: 0.33px;
+    color: #707070;
+    opacity: 1;
+}
+
+h4,
+.campo p {
+    top: 507px;
+    left: 253px;
+    width: 250px;
+    height: 27px;
+    text-align: left;
+    font: normal normal 600 20px/27px Segoe UI;
+    letter-spacing: 0.2px;
+    color: #707070;
+    opacity: 1;
+}
+
+.campo p{
+    font-size:17px;
+    margin:10px 0 5px 0;
+}
+
+::placeholder{
+    color:#b8b8b8;
+}
+
+
+.nav {
+    border: 1px solid #707070;
+    margin: auto;
+    width: 1280px;
+    border-radius: 10px;
+    height: 90px;
+    left: 678px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 834px;
+    height: auto;
+    padding:0 1em 0 1em;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    left: 223px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    opacity: 1;
+}
+
+.FAQ {
+    margin: 0 auto;
+    width: 834px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.grupo:before,
+.grupo:after {
+    content: " ";
+    display: inline-block;
+}
+
+.grupo:after {
+    clear: both;
+}
+
+.campo {
+    margin-bottom: 1em;
+}
+
+.campo h4{
+    margin-bottom:15px;
+}
+
+.campo h4::after,
+.campo h2::after{
+    content: " ";
+    display:block;
+    margin-top:2px;
+    width:100px;
+    height:2px;
+    background-color: rgb(136, 136, 136);
+}
+
+.campo h2::after{
+    margin:0 auto;
+    width:140px;
+}
+
+.campo label {
+    margin-bottom: 0.2em;
+    color: #666;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="password"],
+.campo input[type="url"],
+.campo input[type="tel"],
+.campo select,
+.campo textarea {
+    padding: 0.2em;
+    border: 1px solid rgb(211, 211, 211);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    color:#4b4b4b !important;
+}
+
+.campo select option {
+    padding-right: 1em;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    background: rgba(223, 245, 255, 0.253);
+    outline:none;
+    box-shadow: 0 0 2pt 1pt rgb(126, 157, 230);
+}
+
+.botao {
+    font-size: 1.5em;
+    background: #F90;
+    border: 0;
+    margin-bottom: 1em;
+    color: #F90;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.botao:hover {
+    background: #FB0;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+}
+
+#nome,
+#email {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    text-align: left;
+    font: normal normal 400 20px/27px Segoe UI;
+    letter-spacing: 0.2px;
+    color: #B5B5B5;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+#senha,
+#confsenha {
+    width: 378px;
+    height: 55px;
+    text-align: left;
+    font: normal normal 400 20px/27px Segoe UI;
+    letter-spacing: 0.2px;
+    color: #B5B5B5;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+#confsenha {
+    margin-left:20px;
+}
+
+#emailLogin {
+    width: 205px;
+    height: 37px;
+    border-radius: 10px;
+}
+
+#senhaLogin {
+    top: 27px;
+    left: 903px;
+    width: 204px;
+    height: 37px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+#form-login {
+    text-align: right;
+}
+
+#cep,
+#rua,
+#num {
+    text-align: left;
+    font: normal normal 400 20px/27px Segoe UI;
+    letter-spacing: 0.2px;
+    color: #B5B5B5;
+    opacity: 1;
+    height: 55px;
+    border-radius: 10px;
+}
+
+#bairro,
+#cidade,
+#uf {
+    height: 55px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    opacity: 1;
+    font-size:20px;
+}
+
+#ddd,
+#telefone,
+#ddd2,
+#telefone2,
+#cpf {
+    height: 55px;
+    text-align: left;
+    font: normal normal 400 20px/27px Segoe UI;
+    letter-spacing: 0.2px;
+    color: #B5B5B5;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+#submit {
+    background: #275fa8 0% 0% no-repeat padding-box;
+    color:white;
+    
+    border: 1px solid #707070;
+    opacity: 1;
+
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 55px;
+    width: 100%;
+    margin:30px 0 15px 0;
+}
+
+    #submit:hover{
+        background: #194885 0% 0% no-repeat padding-box;
+        cursor:pointer;
+    }
+
+
+
+#quemsomos {
+    float: left;
+}
+
+#siga {
+    float: right;
+}
+
+#gridEndereco{
+    display:grid;
+    width:100%;
+
+    grid-template: 
+    "cep cep rua rua rua num" 60px
+    "bairro bairro bairro cidade cidade uf" 60px
+    / 50px 80px 150px 100px 200px 100px;
+
+    grid-row-gap:15px;
+    grid-column-gap: 20px;
+}
+
+#sexo{
+    width:250px;
+    width: 270px;
+    height:30px;
+    font-size:18px;
+    text-align:center;
+}
+
