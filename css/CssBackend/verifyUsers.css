@@ -8,21 +8,22 @@
     height:400px;
     padding:10px;
     border-radius:15px;
-    position: absolute;
+    position: fixed;
 
-    top:150;
+    top:150px;
     left:0;
     right:0;
     margin:auto;
 
-    background-color:rgb(54, 54, 54);
+    background-color:rgb(53, 53, 53);
+    box-shadow: 0 0 10px rgb(73, 73, 73);
 }
 
 #foto-prest{
     padding:10px;
     border-radius:5px 0 0 5px;
     grid-area:"foto";
-    background-color:rgb(73, 112, 163);
+    background-color:rgb(77, 77, 77);
     color:rgb(255, 255, 255);
 }
 
@@ -42,9 +43,108 @@
 #info-prest{
     grid-area:"info";
     border-radius:0 5px 5px 0;
-    background-color: rgb(73, 112, 163);
+    background-color:rgb(77, 77, 77);
+    padding:10px;
+}
+
+#info-prest ul li h4::after{
+    content: "";
+    display:flex;
+    width:95px;
+    height:5px;
+    margin-top:5px;
+
+    border-radius:0px 0px 10px 2px;
+
+    background-color: rgb(57, 169, 197);
+}
+
+#info-prest ul{
+    width:305px;
+    height:300px;
+    /*background-color: rgba(150, 196, 180,0.3);*/
+    display:inline-block;
+    list-style-type: none;
+    color:white;
+}
+
+#info-prest ul li{
+    margin-bottom:8px;
+}
+
+#info-prest ul li p:first-child{
+    margin:0 5px 0 5px;
+    float:left;
+    font-weight: bold;
+    color:rgb(105, 214, 241);
 }
 
 .no-see{
     display:none;
+}
+
+/* botão 'X' para fechar */
+#close-pop{
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background-color:rgb(146, 40, 40);
+    color:white;
+    font-weight: bold;
+    overflow: hidden;
+    
+    float:right;
+    text-align: center;
+    line-height: 1.4;
+    font-size: 14px;
+
+    -webkit-user-select: none;
+}
+    #close-pop:hover{
+        cursor: pointer;
+        background-color: rgb(182, 48, 48);
+    }
+
+
+
+#buttons-val{
+    width:250px;
+    margin:10px auto 0 auto;
+}
+
+#buttons-val button{
+    width:100px;
+    height:40px;
+    font-weight: 700;
+    text-align:center;
+    letter-spacing: 1px;
+
+    color:white;
+    border:none;
+    border-radius:2px;
+}
+
+    #buttons-val button:hover{
+        cursor: pointer;
+    }
+
+    #aceitarP:hover{
+        box-shadow: 0 0 5px rgb(81, 185, 128);
+    }
+
+    #recusarP:hover{
+        box-shadow: 0 0 5px rgb(182, 80, 80);
+    }
+
+#buttons-val button:first-child{
+    margin-right:20px;
+}
+
+#buttons-val::after{
+    content: "";
+    width:400px;
+    height:2px;
+    border-radius:1px;
+
+    background-color: rgb(230, 230, 230);
 }

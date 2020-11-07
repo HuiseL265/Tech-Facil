@@ -6,9 +6,9 @@ $connectionInfo = array( "Database"=>"DB_A69E92_dbTechFacil", "UID"=>"DB_A69E92_
 $con = sqlsrv_connect( $serverName, $connectionInfo);
 
 if($con) {
-    echo "<p style=display:none;>Connection established.</p>";
+    //echo "<p style=display:none;>Connection established.</p>";
 }else{
-    echo "Connection could not be established.<br />";
+    //echo "Connection could not be established.<br />";
     die( print_r( sqlsrv_errors(), true));
 }
 

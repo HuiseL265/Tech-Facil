@@ -12,57 +12,6 @@ require("../actions/SQL Server/connectsql.php");
     <link rel="stylesheet" href="../../css/cssBackend/topo.css">
     <link rel="stylesheet" href="../../css/cssBackend/tableUsers.css">
     <link rel="stylesheet" href="../../css/cssBackend/verifyUsers.css">
-    
-    <script>
-        window.onload = function() {
-
-            exitBtn = document.getElementById("deslogar-adm");
-
-            exitBtn.addEventListener("click",function(){
-                window.location.href = "sair.php";
-            });
-
-            //Verificar Status para alteração da cor
-            var collection = $(".status-ver");
-
-            collection.each(function(index,element) {
-                switch(element.innerHTML){
-                    case "Pendente":
-                    element.classList.add("status-orange");
-                    break;
-
-                    case "Negado":
-                    element.classList.add("status-red");
-                    break;
-
-                    case "Confirmado":
-                    element.classList.add("status-green");
-                    break;
-                }
-            });
-
-        };
-
-        function slcPrestador(id){
-            document.getElementById("popup-ver").style.display = "grid";
-            
-            var nome = document.querySelector("#prestador"+id+" .nome-ver").innerHTML;
-            var status = document.querySelector("#prestador"+id+" .status-ver").innerHTML;
-            var email = document.querySelector("#prestador"+id+" .email-ver").innerHTML;
-            var cpf = document.querySelector("#prestador"+id+" .cpf-ver").innerHTML;
-
-                document.querySelector(".nome-prest").innerHTML = nome;
-                document.querySelector(".status-prest").innerHTML = status;
-
-                document.querySelector("#info-prest #nome-prest").innerHTML = nome;
-                document.querySelector("#info-prest #email-prest").innerHTML = email;
-                document.querySelector("#info-prest #cpf-prest").innerHTML = cpf;
-
-            nome = nome.split(" ");
-            document.querySelector("#foto-prest img").src = "../../img/prestadores/ver_" + id + nome[0] + ".png";
-        }
-
-    </script>
 </head>
 <body>
 
@@ -95,6 +44,7 @@ include("topo.php");
 
         //realiza a inserção de dados enquanto houver registros.
         while($prestador = sqlsrv_fetch_array($prestadores, SQLSRV_FETCH_ASSOC)){
+            //print_r ($prestador);
         echo "<tr class=table-info onclick=slcPrestador(". $prestador['idPrestador'] .") id=prestador".$prestador['idPrestador'].">";
             echo "<td class=id-ver> ". $prestador['idPrestador'] ." </td>";                
             echo "<td class=nome-ver style=width:150px;>". $prestador['Nome'] ."</td>";
@@ -102,6 +52,9 @@ include("topo.php");
             echo "<td class=status-ver style=font-weight:bold;width:100px;>". $prestador['Status'] ."</td>"; 
             
             echo "<td class='no-see email-ver'>". $prestador['Email'] ."</td>";
+            echo "<td class='no-see email2-ver'>". $prestador['EmailSecundario'] ."</td>";
+            echo "<td class='no-see tel-ver'>". $prestador['Telefone1'] ."</td>";
+            echo "<td class='no-see tel2-ver'>". $prestador['Telefone2'] ."</td>";
         echo "</tr>"; 
         }
 
@@ -115,27 +68,74 @@ include("topo.php");
         <div id="foto-prest">
             <img src="" alt="foto do prestador">
             <p class="nome-prest" style="font-weight: bold;"></p>
-            <p class="status-prest" style="text-transform: capitalize;"></p>
+            <p class="status-prest" style="text-transform: capitalize; font-weight:600;"></p>
         </div>
-        <div id="info-prest">
-            <table>
-                <tr>
-                    <td>Nome: </td>
-                    <td><p id="nome-prest"></p></td>                    
-                </tr>
+        <div id="info-prest">  
+        <ul>
+            <li>
+                <h4 style="color:rgb(105, 214, 241);">Informações Pessoais</h4>
+            </li>
+            <li>
+                <p>Nome:</p>
+                <p id="nome-prest"></p>
+            </li>
 
-                <tr>
-                    <td>Email: </td>
-                    <td><p id="email-prest"></p></td>                    
-                </tr>
+            <li>
+                <p>Email:</p>
+                <p id="email-prest"></p>
+            </li>
 
-                <tr>
-                    <td>CPF: </td>
-                    <td><p id="cpf-prest"></p></td>                    
-                </tr>
-            </table>            
+            <li>
+                <p>CPF:</p>
+                <p id="cpf-prest"></p>
+            </li>
+
+            <li>
+                <h4 style="color:rgb(105, 214, 241);">Contatos</h4>
+            </li>
+
+            <li>
+                <p>Email Secundário:</p>
+                <p id="email2-prest"></p>
+            </li>
+
+            <li>
+                <p>Telefone:</p>
+                <p id="tel-prest"></p>
+            </li>
+
+            <li>
+                <p>Telefone (2):</p>
+                <p id="tel2-prest"></p>
+            </li>
+        </ul>   
+        
+        <div id="close-pop" alt="fechar">X</div>    
+        <div id="buttons-val">
+            <button id="recusarP" style="background-color: rgb(182, 80, 80);" onclick="Aval(2)">RECUSAR</button>
+            <button id="aceitarP" style="background-color: rgb(81, 185, 128);" onclick="Aval(1)">ACEITAR</button>
+        </div>          
         </div>
+          
+
     </div>
+
+    <script src="../js/verifyUser.js"></script>
+    <script>
+        $(document).ready(function(){
+            //Verificar Status para alteração da cor
+            var collection = $(".status-ver");
+            CorStatus(collection);
+
+            popup = document.getElementById("popup-ver");
+            closepop = document.getElementById("close-pop");
+            closepop.addEventListener("click",function(){
+                popup.style.display = "none";
+            });
+
+        });
+
+    </script>
 
 </body>
 </html>
