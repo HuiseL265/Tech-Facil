@@ -23,7 +23,7 @@
     padding:10px;
     border-radius:5px 0 0 5px;
     grid-area:"foto";
-    background-color:rgb(77, 77, 77);
+    background-color:rgb(53, 53, 53);
     color:rgb(255, 255, 255);
 }
 
@@ -32,7 +32,14 @@
         max-height:230px;
         border-radius:5px;
         margin-bottom:5px;
+
+        transition: box-shadow 0.7s ease-in-out;
     }
+
+        #foto-prest img:hover{
+            cursor:pointer;
+            box-shadow: 0px 0px 6px rgb(141, 141, 141);
+        }
 
     #foto-prest p{
         text-align:center;
@@ -92,7 +99,7 @@
 }
 
 /* botão 'X' para fechar */
-#close-pop{
+.close-pop{
     width:20px;
     height:20px;
     border-radius:20px;
@@ -108,7 +115,7 @@
 
     -webkit-user-select: none;
 }
-    #close-pop:hover{
+    .close-pop:hover{
         cursor: pointer;
         background-color: rgb(182, 48, 48);
     }
@@ -160,26 +167,37 @@
 
 /* foto zoom */
 
-#foto-zoom{
+#container-zoom{
     display:none;
-    width:auto;
     background-color: rgba(0, 0, 0,0.5);
-
+    
+    width:auto;
+    margin:0 auto;
     position: fixed;
     top:55px;
     left:0;
     bottom:0;
     right:0;
 
-    margin:0 auto;
-
     justify-content: center;
     align-items: center;
 }
 
-#foto-zoom img{
-    background-repeat: no-repeat;
-    margin:0 auto;
+#foto-zoom{
     width:auto;
     height:auto;
 }
+
+    #foto-zoom .close-pop{
+        background-color: rgb(65, 65, 65);
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    #foto-zoom img{
+        background-repeat: no-repeat;
+        margin:0 auto;
+        width:auto;
+        height:auto;
+
+        border-radius: 5px;
+    }

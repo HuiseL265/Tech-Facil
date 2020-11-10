@@ -110,20 +110,19 @@ include("topo.php");
             </li>
         </ul>   
         
-        <div id="close-pop" alt="fechar">X</div>    
-        <div id="buttons-val">
-            <button id="recusarP" style="background-color: rgb(182, 80, 80);">RECUSAR</button>
-            <button id="aceitarP" style="background-color: rgb(81, 185, 128);">ACEITAR</button>
-        </div>          
-        </div>
+        <div class="close-pop" alt="fechar" onclick=fechar(1)>X</div>    
+            <div id="buttons-val">
+                <button id="recusarP" style="background-color: rgb(182, 80, 80);">RECUSAR</button>
+                <button id="aceitarP" style="background-color: rgb(81, 185, 128);">ACEITAR</button>
+            </div>          
+        </div>                  
+    </div>
 
+    <div id="container-zoom">
         <div id="foto-zoom">
             <img src="" alt="foto ampliada do prestador">
+            <div class="close-pop" alt="fechar" onclick=fechar(2)>X</div> 
         </div>
-
-        
-          
-
     </div>
 
     <script src="../js/verifyUser.js"></script>
@@ -132,12 +131,6 @@ include("topo.php");
             //Verificar Status para alteração da cor
             var collection = $(".status-ver");
             CorStatus(collection);
-
-            popup = document.getElementById("popup-ver");
-            closepop = document.getElementById("close-pop");
-            closepop.addEventListener("click",function(){
-                popup.style.display = "none";
-            });
 
         });
 

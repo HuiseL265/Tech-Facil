@@ -16,7 +16,6 @@ function slcPrestador(id){
 
     Info = TestIntegridade(arrayInfo);
 
-    
         document.querySelector(".nome-prest").innerHTML = Info[0];
         document.querySelector(".status-prest").innerHTML = Info[1];
 
@@ -30,7 +29,6 @@ function slcPrestador(id){
 
     nome = nome.split(" ");
     document.querySelector("#foto-prest img").src = "../../img/prestadores/ver_" + id + nome[0] + ".png";
-
 
     //Verificar Status para alteração da cor
     var collection = $(".status-prest");
@@ -108,12 +106,28 @@ function Aval(id,i){
 
 }
 
-
 function darZoom(id,nome){
     ftZoom = document.querySelector("#foto-zoom img");
 
     var lownome = nome.toLowerCase();
 
-    document.querySelector("#foto-zoom").style.display = 'flex';
+    document.querySelector("#container-zoom").style.display = 'flex';
     ftZoom.src = "../../img/prestadores/ver_" + id + lownome + ".png";
+}
+
+function fechar(num){
+    //1
+    var popupinfo = document.getElementById("popup-ver");
+    //2
+    var popupfoto = document.getElementById("container-zoom");
+
+    switch(num){
+        case 1:
+            popupinfo.style.display = "none";
+            break;
+
+        case 2:
+            popupfoto.style.display = "none";
+            break;
+    }
 }
