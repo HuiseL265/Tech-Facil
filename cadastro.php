@@ -1,5 +1,10 @@
+<?php
+    session_start();
+    extract($_POST);
+?>
+
 <!DOCTYPE html>
-<html lang="">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -32,10 +37,11 @@
                     <div class="campo">
                         <h2>CADASTRO</h2>
                         <BR>
-                        <input type="text" id="nome" name="nome" placeholder="Nome Completo" value="" required=""><br>
-                        <input type="email" id="email" name="email" placeholder="E-mail" value="" required=""><br>
-                        <input type="password" id="senha" name="senha" placeholder="Senha" value="" required="">
-                        <input type="password" id="confsenha" name="confsenha" placeholder="Confirmar Senha" value="" required="">
+                        <input type="text" id="nome" name="nome" placeholder="Nome Completo" value="<?php echo $nome?>" required=""><br>
+                        <input type="email" id="email" name="email" placeholder="E-mail" value="<?php echo $email?>" required=""><br>
+                        <input type="password" id="senha" name="senha" placeholder="Senha" value="<?php echo$senha?>" required="">
+                        <input type="password" id="confsenha" name="confsenha" placeholder="Confirmar Senha" value="<?php echo$senha2?>" required="">
+                        
                     </div>
                 </fieldset>
                 
@@ -48,6 +54,8 @@
                         <input type="text" id="bairro" name="bairro" placeholder="Bairro" style="grid-area: bairro;" value="" required="">
                         <input type="text" id="cidade" name="cidade" placeholder="Cidade" style="grid-area: cidade;" value="" required="">
                         <input type="text" id="uf" name="uf" placeholder="UF" style="grid-area: uf;" value="" required=""maxlength="2">
+
+                        <input type="text" id="complemento" name="complemento" placeholder="Próximo ao... (Opcional)" style="grid-area: complemento;" value="" required="">
                     </div>                   
                 </div>
                 <div class="campo">
@@ -59,12 +67,13 @@
                 </div>
                 <div class="campo">
                     <h4>Complemento</h4>
-                    <input type="text" id="cpf" name="cpf" placeholder="CPF" style="width: 200px" value="" required="" maxlength="11">
+                    <input type="text" id="cpf" name="cpf" placeholder="CPF" style="width: 250px" value="" required="" maxlength="11">
                     <p>Sexo</p>
                     <select name="sexo" id="sexo" placeholder="Sexo" style="width: 100px" >
-                        <option value="M">M</option>
-                        <option value="F">F</option>
-                        <option value="I">I</option>
+                        <option value=""></option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Outro">Outro</option>
                     </select>
                     
                     <p>Tipo de Cadastro</p>
