@@ -36,6 +36,11 @@ function slcPrestador(id){
     var collection = $(".status-prest");
 
     CorStatus(collection);
+
+    document.querySelector("#foto-prest img").setAttribute("onclick","darZoom("+id+",'"+nome[0]+"')");
+    
+    document.querySelector("#recusarP").setAttribute("onclick","Aval("+id+", 2)");
+    document.querySelector("#aceitarP").setAttribute("onclick","Aval("+id+", 1)");
 }
 
 function CorStatus(classUsed){
@@ -52,7 +57,7 @@ function CorStatus(classUsed){
                     element.classList.add("status-red");
                     break;
 
-                    case "Confirmado":
+                    case "Aceito":
                     element.classList.add("status-green");
                     break;
                 }
@@ -73,15 +78,25 @@ function TestIntegridade(array){
     return dados;
 }
 
-function Aval(i){
+function Aval(id,i){
 
     if(confirm("Por favor confirme sua resposta.")){
 
         $.ajax({
-            url: '../actions/verificarPrestador.php?aval=' + i,
+            url: '../actions/verificarPrestador.php?aval=' + i + '&&idPrest=' + id,
             success: function(data) {
               console.log(data);
-              alert(data);
+              
+              switch(i){
+                  case 1:
+                      alert("Usuario aceito no sistema com sucesso!");
+                      location.reload();
+                      break;
+                  case 2:
+                      alert("Usuário recusado no sistema com sucesso!");
+                      location.reload();
+                      break;
+              }
             }
         });
 
@@ -91,4 +106,14 @@ function Aval(i){
         
         }
 
+}
+
+
+function darZoom(id,nome){
+    ftZoom = document.querySelector("#foto-zoom img");
+
+    var lownome = nome.toLowerCase();
+
+    document.querySelector("#foto-zoom").style.display = 'flex';
+    ftZoom.src = "../../img/prestadores/ver_" + id + lownome + ".png";
 }

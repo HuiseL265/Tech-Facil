@@ -66,7 +66,7 @@ include("topo.php");
 
     <div id="popup-ver">
         <div id="foto-prest">
-            <img src="" alt="foto do prestador">
+            <img src="" alt="foto do prestador" >
             <p class="nome-prest" style="font-weight: bold;"></p>
             <p class="status-prest" style="text-transform: capitalize; font-weight:600;"></p>
         </div>
@@ -112,10 +112,16 @@ include("topo.php");
         
         <div id="close-pop" alt="fechar">X</div>    
         <div id="buttons-val">
-            <button id="recusarP" style="background-color: rgb(182, 80, 80);" onclick="Aval(2)">RECUSAR</button>
-            <button id="aceitarP" style="background-color: rgb(81, 185, 128);" onclick="Aval(1)">ACEITAR</button>
+            <button id="recusarP" style="background-color: rgb(182, 80, 80);">RECUSAR</button>
+            <button id="aceitarP" style="background-color: rgb(81, 185, 128);">ACEITAR</button>
         </div>          
         </div>
+
+        <div id="foto-zoom">
+            <img src="" alt="foto ampliada do prestador">
+        </div>
+
+        
           
 
     </div>

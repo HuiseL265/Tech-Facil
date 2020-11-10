@@ -70,9 +70,9 @@ ON Tb_Contratante.idContratante = Tb_RequisicaoProblema.idContratante
 LEFT JOIN Tb_Usuario
 ON Tb_Usuario.idUsuario = Tb_Contratante.idUsuario
 
----Verificar Verifica��o
+---Verificar Verificacao
 SELECT 
-Tb_Verificacao.idVerificacao as ID_Verifica��o,
+Tb_Verificacao.idVerificacao as ID_Verificacao,
 Tb_PrestadorDeServico.idPrestador as ID_Contratante,
 Tb_Usuario.Nome,
 Tb_Verificacao.Status,
@@ -114,10 +114,10 @@ usuario.Nome,
 usuario.CPF,
 usuario.tipoUsuario,
 escolaridade.curso as Curso,
-escolaridade.instituicao as Institui��o,
-escolaridade.nivelFormacao as Forma��o,
-escolaridade.situacao as Situa��o,
-escolaridade.conclusaoData as Data_de_Conclus�o
+escolaridade.instituicao as Instituicao,
+escolaridade.nivelFormacao as Formacao,
+escolaridade.situacao as Situacao,
+escolaridade.conclusaoData as Data_de_Conclusao
 FROM Tb_Escolaridade as escolaridade
 
 INNER JOIN Tb_Curriculo

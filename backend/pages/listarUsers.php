@@ -24,7 +24,7 @@
                 <th>CPF</th>
             </tr>
             <?php 
-            if(!$infoUsers = sqlsrv_query($con, "SELECT * FROM Tb_Usuario")){
+            if(!$infoUsers = sqlsrv_query($con, "SELECT * FROM Tb_Usuario WHERE tipoUsuario != 'Prestador'")){
                 echo "erro na query";
             }else{
                 while ($user = sqlsrv_fetch_array($infoUsers, SQLSRV_FETCH_ASSOC)){ ?>
