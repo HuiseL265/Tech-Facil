@@ -27,9 +27,10 @@ if ($senha === $confsenha) {
     $senha = md5($senha);
 
     if($tipoUser != "" and $tipoUser != null){
-    sqlsrv_query($con, "INSERT INTO Tb_Usuario (Nome, CPF, Email, Senha, dataCriacao, tipoUsuario)
-    VALUES('$nome', '$cpf', '$email', '$senha', '$data', '$tipoUser') ");
+    sqlsrv_query($con, "INSERT INTO Tb_Usuario (Nome, CPF, Email, Senha, dataCriacao, tipoUsuario, sexo)
+    VALUES('$nome', '$cpf', '$email', '$senha', '$data', '$tipoUser', '$sexo') ");
     echo "Redireciona para página principal";
+
 
     $usuario_query = sqlsrv_query($con, "SELECT * FROM Tb_Usuario WHERE Email = '$email'");
 
@@ -41,6 +42,11 @@ if ($senha === $confsenha) {
     }else{
         sqlsrv_query($con, "INSERT INTO Tb_Contratante (idUsuario) VALUES ($usuario[idUsuario])");
     }
+
+
+    sqlsrv_query($con, "INSERT INTO Tb_Endereco (idUsuario, Rua,Cidade,Bairro,CEP,UF,Numero,Complemento)
+    VALUES('$usuario[idUsuario]', '$rua','$cidade','$bairro','$cep','$uf','$num','$complemento')");
+
    
     }
 }

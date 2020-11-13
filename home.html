@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,7 @@
         <img src="img/computer 2d.jpg" alt="computer">
         </div>
         <div class="form-registrar">
-        <form action="backend/actions/cadastro.act.php" method="post">
+        <form action="cadastro.php" method="post">
             <table>
                 <tr>
                     <td colspan="2"
@@ -50,26 +50,7 @@
                        <td><labeL for="email">Email</labeL></td>
                        <td><input type="email" id="email" name="email" required="required"></td>
                    </tr>
-                   <tr>
-                       <td><labeL for="cpf">CPF</labeL></td>
-                       <td><input type="text" maxlength="11" id="cpf" name="cpf" required="required"></td>
-                   </tr>
-                   <tr>
-                       <td><labeL for="telefone">Telefone</labeL></td>
-                       <td><input type="text" maxlength="11" id="telefone" name="telefone" required="required"></td>
-                   </tr>
-                   <tr>
-                       <td><labeL for="telefone2">Telefone(2)</labeL></td>
-                       <td><input type="text" maxlength="11" id="telefone2" name="telefone2"></td>
-                   </tr>
-                   <tr>
-                        <td><labeL for="">Tipo de Conta:</labeL></td>
-                        <td id="tipoConta">
-                            <label for="comum">Comum</label>
-                            <input type="radio" name="tipoUser" value="Comum" id="comum" required>
-                            <label for="prestador">Freelancer</label><input type="radio" name="tipoUser" value="Prestador" id="prestador">
-                        </td>
-                   </tr>
+                   
                    <tr>
                        <td><labeL for="senha">Senha</labeL></td>
                        <td><input type="password" name="senha"  id="senha" required="required"></td>
