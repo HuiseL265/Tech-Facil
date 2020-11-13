@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login-Tech Facil</title>
 
-    <link rel="stylesheet" href="../../css/CssBackend/login-adm-style.css">
+    <link rel="stylesheet" href="../../css/backend css/login-adm-style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -54,7 +54,7 @@
     <div id="container-login-adm">
 
         <div id="container-foto">
-            <img src="../../img/techFacilcolored.png" alt="TechFacil - Logo">
+            <img src="../../img/techFacil img/techFacilcolored.png" alt="TechFacil - Logo">
         </div>
 
         <form action="../actions/logar-adm.act.php" method="post">

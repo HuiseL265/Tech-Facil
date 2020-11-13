@@ -9,9 +9,9 @@ require("../actions/SQL Server/connectsql.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificar Usuarios</title>
 
-    <link rel="stylesheet" href="../../css/cssBackend/topo.css">
-    <link rel="stylesheet" href="../../css/cssBackend/tableUsers.css">
-    <link rel="stylesheet" href="../../css/cssBackend/verifyUsers.css">
+    <link rel="stylesheet" href="../../css/backend css/topo.css">
+    <link rel="stylesheet" href="../../css/backend css/tableUsers.css">
+    <link rel="stylesheet" href="../../css/backend css/verifyUsers.css">
 </head>
 <body>
 
@@ -55,6 +55,9 @@ include("topo.php");
             echo "<td class='no-see email2-ver'>". $prestador['EmailSecundario'] ."</td>";
             echo "<td class='no-see tel-ver'>". $prestador['Telefone1'] ."</td>";
             echo "<td class='no-see tel2-ver'>". $prestador['Telefone2'] ."</td>";
+            echo "<td class='no-see diretorio'>". $prestador['diretorioArquivo'] ."</td>";
+            echo "<td class='no-see tipoArquivo'>". $prestador['tipoArquivo'] ."</td>";
+            echo "<td class='no-see idVer'>". $prestador['idVerificacao'] ."</td>";
         echo "</tr>"; 
         }
 
@@ -64,6 +67,7 @@ include("topo.php");
 
     ?>
 
+<div class="container-popup" id="cont-popup">
     <div id="popup-ver">
         <div id="foto-prest">
             <img src="" alt="foto do prestador" >
@@ -117,8 +121,22 @@ include("topo.php");
             </div>          
         </div>                  
     </div>
+</div>
 
-    <div id="container-zoom">
+    <!--justificativa da recusa -->
+    <div class="container-popup" id="cont-just">
+        <div id="container-just">
+            <p>Por favor, justifique sua recusa(*)</p>
+            <div class="close-pop" alt="fechar" onclick=fechar(3)>X</div> 
+
+            <textarea name="justify" id="justify" cols="30" rows="10"></textarea>
+
+            <button id="btnJustify">Recusar</button>
+        </div>
+    </div>
+
+    <!--zoom da foto -->
+    <div class="container-popup" id="cont-zoom">
         <div id="foto-zoom">
             <img src="" alt="foto ampliada do prestador">
             <div class="close-pop" alt="fechar" onclick=fechar(2)>X</div> 

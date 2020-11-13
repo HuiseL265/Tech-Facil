@@ -2,14 +2,14 @@
 require('SQL Server/connectsql.php');
 
 $aval = $_GET['aval'];
-$id = $_GET['idPrest'];
+$id = $_GET['idVer'];
+$just = $_GET['just'];
 
 switch($aval){
     case 1:
         if(!$query = sqlsrv_query($con, "UPDATE Tb_Verificacao 
-        SET Status = 'Aceito' 
-        FROM Tb_PrestadorDeServico
-        WHERE Tb_Verificacao.idVerificacao = Tb_PrestadorDeServico.idVerificacao")){
+        SET Status = 'Aceito' , descricao = null
+        WHERE idVerificacao = $id")){
             echo "ERRO";
         }else{
             echo $aval;
@@ -17,14 +17,17 @@ switch($aval){
     break;
 
     case 2:
-        if(!$query = sqlsrv_query($con, "UPDATE Tb_Verificacao 
-        SET Status = 'Negado' 
-        FROM Tb_PrestadorDeServico
-        WHERE Tb_Verificacao.idVerificacao = Tb_PrestadorDeServico.idVerificacao")){
-            echo "ERRO";
+        if($just != "" and $just != null){
+            if(!$query = sqlsrv_query($con, "UPDATE Tb_Verificacao 
+            SET Status = 'Negado',descricao = '$just' 
+            WHERE idVerificacao = $id")){
+                echo "ERRO";
+            }else{
+                echo $aval;
+            }
         }else{
-            echo $aval;
-        }
+            //lembrar de colocar uma resposta caso não haja justificativa *
+        }  
     break;
 }
 

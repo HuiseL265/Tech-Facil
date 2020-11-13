@@ -1,5 +1,22 @@
-#popup-ver{
+/* container para os popups */
+.container-popup{
     display:none;
+    background-color: rgba(0, 0, 0,0.5);
+    
+    width:auto;
+    margin:0 auto;
+    position: fixed;
+    top:55px;
+    left:0;
+    bottom:0;
+    right:0;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#popup-ver{
+    display:grid;
     grid-template-columns: 200px 370px;
     grid-template-areas: "foto info";
     gap: 10px;
@@ -8,7 +25,6 @@
     height:400px;
     padding:10px;
     border-radius:15px;
-    position: fixed;
 
     top:150px;
     left:0;
@@ -167,30 +183,24 @@
 
 /* foto zoom */
 
-#container-zoom{
-    display:none;
-    background-color: rgba(0, 0, 0,0.5);
-    
-    width:auto;
-    margin:0 auto;
-    position: fixed;
-    top:55px;
-    left:0;
-    bottom:0;
-    right:0;
-
-    justify-content: center;
-    align-items: center;
-}
-
 #foto-zoom{
     width:auto;
+    max-width: 80%;
     height:auto;
+    max-height: 100%;
 }
 
     #foto-zoom .close-pop{
-        background-color: rgb(65, 65, 65);
+        width:30px;
+        height:30px;
+        line-height: 1.5;
+        font-size: 20px;
+        background-color: rgb(146, 57, 57);
         border-radius: 0px 5px 5px 0px;
+    }
+
+    #foto-zoom .close-pop:hover{
+        background-color: rgb(206, 60, 60);
     }
 
     #foto-zoom img{
@@ -199,5 +209,79 @@
         width:auto;
         height:auto;
 
-        border-radius: 5px;
+        border-radius: 5px 0px 5px 5px ;
     }
+
+
+/* Jusitificativa da Recusa css */
+#container-just{
+    margin:0 auto;
+
+    width:600px;
+    height:420px;
+    padding:10px;
+
+    border-radius:10px;
+
+    background-color:rgb(77, 77, 77);
+}
+
+#container-just p{
+    color:rgb(231, 133, 133);
+
+    text-transform: uppercase;
+    font-weight: 700;
+
+    display:inline;
+}
+
+#container-just textarea{
+    width:100%;
+    height:300px;
+    padding:10px;
+    margin:15px 0px 10px 0px;
+
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 500;
+
+    border-radius:5px;
+
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+
+    background-color:rgb(231, 231, 231);
+    outline:none;
+
+    box-shadow:0px 0px 3px inset rgb(48, 48, 48);
+}
+
+#container-just button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height:45px;
+    margin:0 auto;
+
+    background-color:rgb(121, 45, 45);
+    color:white;
+
+    font-size:20px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    outline:none;
+
+    border: none;
+    border-radius:5px;
+}
+
+#container-just button:hover{
+    background-color: rgb(156, 50, 50);
+    box-shadow: 0px 0px 5px rgb(156, 50, 50);
+    
+    cursor:pointer;
+}
+
