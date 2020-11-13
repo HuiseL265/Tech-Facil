@@ -17,6 +17,7 @@ if (!$con) {
 if (sqlsrv_num_rows($verEmail) === 1) {
     echo "ja tem esse email";
     return;
+    
 }else if (sqlsrv_num_rows($verCpf) === 1) {
     echo "ja tem esse cpf irmao";
     return;

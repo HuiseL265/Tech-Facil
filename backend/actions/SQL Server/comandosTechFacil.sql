@@ -14,7 +14,7 @@ Tb_PrestadorDeServico.idPrestador as ID_Prestador,
 Tb_Usuario.Nome,
 Tb_Usuario.CPF,
 Tb_Usuario.Email,
-Tb_Usuario.dataCriacao as DataDeCria��o
+Tb_Usuario.dataCriacao as DataDeCriacao
 FROM Tb_PrestadorDeServico
 LEFT JOIN Tb_Usuario
 ON Tb_Usuario.idUsuario = Tb_PrestadorDeServico.idUsuario
@@ -25,7 +25,7 @@ Tb_Contratante.idContratante as ID_Contratante,
 Tb_Usuario.Nome,
 Tb_Usuario.CPF,
 Tb_Usuario.Email,
-Tb_Usuario.dataCriacao as DataDeCria��o
+Tb_Usuario.dataCriacao as DataDeCriacao
 FROM Tb_Contratante
 LEFT JOIN Tb_Usuario
 ON Tb_Usuario.idUsuario = Tb_Contratante.idUsuario
