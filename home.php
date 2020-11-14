@@ -3,33 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>HOME</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/frontend css/home.css">
-    <link rel="stylesheet" href="css/frontend css/main.css">
-    
-
+    <link rel="stylesheet" href="css/frontend css/main.css">   
 </head>
 <body>
-    <div class="nav">
-        <div class="logo">
-            <img src="img/techFacil img/techFacilcolored.png" alt="logo" width="200px" height="80px">
-        </div>
 
-        <div class="menu">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">SOBRE</a></li>
-                <li><a href="#">etc1</a></li>
-                <li><a href="#">etc2</a></li>
-            </ul>
-            <form id="form-login" method="post" action="">
-                <input type="email" id="emailLogin" name="email" placeholder="E-mail" required="required">
-                <input type="password" id="senhaLogin" name="senha" placeholder="Senha" required="required">
-                <button>ENTRAR</button>
-            </form>
-        </div>
-    </div>
+    <?php include('main.php') ?>
+
     <div class="header">
         <div class="info">
         <p>Encontre o melhor profissional freelancer para realizar seus Projetos</p>

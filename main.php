@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>main</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/CssFrontend/main.css">
 
-</head>
-<body>
     <div class="nav">
         <div class="logo">
-            <img src="img/techFacilcolored.png" alt="logo" width="190px" height="75px">
+            <img src="img/techFacil img/techFacilP&B.png" alt="logo" width="190px" height="75px">
         </div>
 
         <div class="menu">
@@ -28,5 +18,3 @@
             </form>
         </div>
     </div>
-</body>
-</html>

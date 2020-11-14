@@ -10,12 +10,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/CssFrontend/cadastro.css" />
-    <title>Cadastrar</title>
+    <link rel="stylesheet" href="css/frontend css/main.css" />
+    <link rel="stylesheet" href="css/frontend css/cadastro.css" />
+    <link rel="stylesheet" href="css/frontend css/rodape.css" />
+    <title>CADASTRAR</title>
 
 </head>
 
 <body>
+
+    <?php require("main.php") ?>
+
     <!--
     <div class="nav">
         <div class="logo">
@@ -96,6 +101,8 @@
             </div>
         </div>
     -->
+
+    <?php include("rodape.php") ?>
 </body>
 
 </html>

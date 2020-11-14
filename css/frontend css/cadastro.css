@@ -49,18 +49,8 @@ h4,
     color:#b8b8b8;
 }
 
-
-.nav {
-    border: 1px solid #707070;
-    margin: auto;
-    width: 1280px;
-    border-radius: 10px;
-    height: 90px;
-    left: 678px;
-}
-
 .container {
-    margin: 0 auto;
+    margin: 120px auto 0px auto;
     width: 834px;
     height: auto;
     padding:0 1em 0 1em;
