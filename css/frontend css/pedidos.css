@@ -1,0 +1,98 @@
+#container-req{
+    display:flex;
+    
+    width:1200px;
+    height:800px;
+    padding:10px;
+
+    gap:2%;
+
+    margin:150px auto 0px auto;
+
+    border:1px  solid rgb(61, 61, 61);
+    border-radius: 10px;
+}
+
+#container-req > div{
+    border: 1px solid #000;
+    padding:15px;
+}
+
+#container-req > div h3{
+    font-size: 20px;
+    color:rgb(59, 59, 59);
+}
+
+#container-req > div h3::after,
+.lista-conteudo > .lista-desc::before{
+    display:block;
+    content:"";
+    width:80%;
+    height:1px;
+    background-color:rgb(59, 59, 59);
+    color:rgb(59, 59, 59);
+    box-shadow:-1px 0px 1px #000;
+
+    margin-bottom:10px;
+}
+
+#cont-filtro{
+    width:200px;
+    border-radius:10px 0px 0px 10px;
+}
+
+#cont-lista{
+    width:450px;
+}
+
+#cont-info{
+    width:550px;
+    border-radius:0px 10px 10px 0px;
+}
+
+
+/* lista */
+.lista-conteudo{
+    width:100%;
+    height:100px;
+    padding:10px;
+
+    margin-bottom:20px;
+
+    border-radius:2px;
+    border:1px solid #000;
+
+    overflow: hidden;
+}
+
+.lista-conteudo > h5{
+    color:rgb(58, 58, 58);
+    display:inline;
+    font-size:15px;
+}
+
+.lista-conteudo  > .lista-status{
+    float:right;
+}
+
+.lista-conteudo > .lista-desc{
+    width:100%;
+    font-size:12px;
+    color:rgb(70, 70, 70);
+}
+
+.lista-conteudo > .lista-desc::before{
+    width:40%;
+    color:rgb(105, 105, 105);
+}
+
+/* filtros */
+
+#cont-filtro h5{
+    margin:20px 0px 5px 0px;
+}
+
+.radio-buttons{
+    font-size:15px;
+    margin-bottom:10px;
+}

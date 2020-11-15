@@ -6,7 +6,7 @@
     <title>HOME</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/frontend css/home.css">
-    <link rel="stylesheet" href="css/frontend css/main.css">   
+    <link rel="stylesheet" href="css/frontend css/main.css">    
 </head>
 <body>
 

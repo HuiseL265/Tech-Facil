@@ -1,9 +1,3 @@
-* {
-    margin: 1px;
-    padding: 1px;
-    box-sizing: border-box;
-}
-
 fieldset {
     border: 0;
 }
@@ -184,27 +178,6 @@ h4,
 
 #confsenha {
     margin-left:20px;
-}
-
-#emailLogin {
-    width: 205px;
-    height: 37px;
-    border-radius: 10px;
-}
-
-#senhaLogin {
-    top: 27px;
-    left: 903px;
-    width: 204px;
-    height: 37px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
-    opacity: 1;
-    border-radius: 10px;
-}
-
-#form-login {
-    text-align: right;
 }
 
 #cep,

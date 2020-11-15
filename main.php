@@ -1,20 +1,37 @@
+  <?php
 
-    <div class="nav">
-        <div class="logo">
-            <img src="img/techFacil img/techFacilP&B.png" alt="logo" width="190px" height="75px">
+  require("backend/actions/SQL Server/connectsql.php");
+
+  ?>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <header id="main-top">
+        <div id="logo-main">
+            <a href="home.php">
+                <img src="img/techFacil img/techFacilwhite.png" alt="logo" width="190px" height="75px">
+            </a>
         </div>
 
         <div class="menu">
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">sobre</a></li>
-                <li><a href="#">etc1</a></li>
-                <li><a href="#">etc2</a></li>
-            </ul>
             <form id="form-login" method="post" action="">
-                <input type="email" id="emailLogin" name="email" placeholder="E-mail" required="required">
-                <input type="password" id="senhaLogin" name="senha" placeholder="Senha" required="required">
+                <div class="campo-main">
+                    <label for="emailLogin">Email</label>
+                    <input type="email" id="emailLogin" name="email" required="required">
+                </div>
+
+                <div class="campo-main">
+                    <label for="senhaLogin">Senha</label>
+                    <input type="password" id="senhaLogin" name="senha" required="required">
+                </div>       
                 <button>ENTRAR</button>
             </form>
         </div>
-    </div>
+</header>
+    
+    <nav id="line-nav">
+            <ul>
+            <a href="home.php"><li>Home</li></a>            
+            <a href="pedidos.php"><li>Pedidos</li></a>  
+            <a href="sobre.php"><li>Sobre</li></a>  
+            </ul>
+    </nav>
