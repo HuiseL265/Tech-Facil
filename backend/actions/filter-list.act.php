@@ -1,10 +1,27 @@
 <?php
 require("SQL Server/connectsql.php");
 
+/* criação das variaveis */
 $txt = $_GET['texto'];
-$wlikeStatus = "WHERE Tb_RequisicaoProblema.Status LIKE '%$txt%' OR";
-$wlikeContexto = "Tb_RequisicaoProblema.Contexto LIKE '%$txt%' OR";
-$wlikeProblem = "Tb_RequisicaoProblema.tipoProblema LIKE '%$txt%'";
+$tipo = $_GET['tipo'];
+$wlikeStatus = "";
+$wlikeContexto = "";
+$wlikeProblem = "";
+
+/* filtro para saber qual tipo de busca irá fazer */
+switch($tipo){
+    case "status":
+        $wlikeStatus = "WHERE Tb_RequisicaoProblema.Status LIKE '%$txt%'";
+    break;
+
+    case "tipoProblema":
+        $wlikeProblem = "WHERE Tb_RequisicaoProblema.tipoProblema LIKE '%$txt%'";
+    break;
+
+    case "busca":
+        $wlikeContexto = "WHERE Tb_RequisicaoProblema.Contexto LIKE '%$txt%'";
+    break;
+}
 
 if($txt == null or $txt == ""){
     $wlikeStatus = "";
@@ -28,14 +45,13 @@ ON Tb_Contratante.idContratante = Tb_RequisicaoProblema.idContratante
 LEFT JOIN Tb_Usuario
 ON Tb_Usuario.idUsuario = Tb_Contratante.idUsuario
 $wlikeStatus $wlikeContexto $wlikeProblem", $params, $options)){
-    echo "<p style=font-size:12px>*erro na query, por favor chame a policia</p>";
+    echo "<p style=font-size:12px>*Nenhum resultado encontrado</p>";
 }else{
-
     if(sqlsrv_num_rows($lista) >= 1 or sqlsrv_num_rows($lista) != false){
         while ($conteudo = sqlsrv_fetch_array($lista, SQLSRV_FETCH_ASSOC)){
-            echo "<div class='lista-conteudo'>";
+            echo "<div class='lista-conteudo' onclick=detalhar(". $conteudo['ID_Requisicao'] .")>";
             echo "<h5>".utf8_encode($conteudo['Tipo_Problema'])."</h5>";
-            echo "<p class='lista-status'>".utf8_encode($conteudo['Status'])."</p>";
+            echo "<p class='lista-status'>".trim(utf8_encode($conteudo['Status']))."</p>";
             echo "<p class='lista-desc'>".utf8_encode($conteudo['Contexto'])."</p>";
             echo "</div>";
         }

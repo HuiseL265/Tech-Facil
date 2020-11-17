@@ -30,7 +30,7 @@ FROM Tb_Contratante
 LEFT JOIN Tb_Usuario
 ON Tb_Usuario.idUsuario = Tb_Contratante.idUsuario
 
----Verificar Endere�o por Usuario
+---Verificar Endereço por Usuario
 SELECT 
 Tb_Usuario.idUsuario as ID_Usuario,
 Tb_Usuario.Nome,

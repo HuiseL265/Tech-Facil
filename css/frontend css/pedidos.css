@@ -1,26 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+
 #container-req{
     display:flex;
     
-    width:1200px;
-    height:800px;
+    width:1100px;
+    height:500px;
     padding:10px;
 
-    gap:2%;
+    gap:1%;
 
-    margin:150px auto 0px auto;
+    margin:120px auto 0px auto;
 
     border:1px  solid rgb(61, 61, 61);
     border-radius: 10px;
+
+    background: rgb(16,67,126);
+    background: linear-gradient(90deg, rgba(16,67,126,1) 0%, rgba(33,80,182,1) 40%, rgba(0,143,209,1) 100%);
 }
 
 #container-req > div{
     border: 1px solid #000;
-    padding:15px;
+    padding:10px;
+
+    background-color:white;
 }
 
 #container-req > div h3{
     font-size: 20px;
-    color:rgb(59, 59, 59);
+    color:rgb(43, 104, 173);
 }
 
 #container-req > div h3::after,
@@ -37,16 +46,16 @@
 }
 
 #cont-filtro{
-    width:200px;
+    width:220px;
     border-radius:10px 0px 0px 10px;
 }
 
 #cont-lista{
-    width:450px;
+    width:400px;
 }
 
 #cont-info{
-    width:550px;
+    width:600px;
     border-radius:0px 10px 10px 0px;
 }
 
@@ -61,24 +70,43 @@
 
     border-radius:2px;
     border:1px solid #000;
+    box-shadow:0;
 
     overflow: hidden;
+    
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    color:rgb(58, 58, 58);
+}
+
+.lista-conteudo:hover{
+    border:1px solid rgb(51, 92, 168);
+    box-shadow: 0px 0px 5px rgb(67, 133, 255) inset;
+    cursor:pointer;
+
+    color: rgb(67, 133, 255);
 }
 
 .lista-conteudo > h5{
-    color:rgb(58, 58, 58);
     display:inline;
     font-size:15px;
 }
 
 .lista-conteudo  > .lista-status{
+    letter-spacing: 0.3px;
+    color:rgb(58, 58, 58);
     float:right;
 }
 
+.status-red{ color:rgb(187, 59, 59) !important; }
+.status-green{ color:rgb(70, 187, 59) !important; }
+
 .lista-conteudo > .lista-desc{
     width:100%;
+    height:50px;
     font-size:12px;
     color:rgb(70, 70, 70);
+    overflow: hidden;
 }
 
 .lista-conteudo > .lista-desc::before{
@@ -93,6 +121,80 @@
 }
 
 .radio-buttons{
-    font-size:15px;
+    font-size:14px;
     margin-bottom:10px;
+
+    letter-spacing: 0.3px;
+}
+
+.radio-buttons label{
+    margin-bottom:5px;
+}
+
+#busca-txt{
+    width:80%;
+    height:25px;
+    border:1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    padding:0px 5px;
+
+    outline:none;
+}
+
+#btnBuscar{
+    width:30px;
+    height:25px;
+    margin-bottom: -10px;
+    margin-left: -5px;
+    position: absolute;
+
+    border-radius:0px 5px 5px 0px;
+
+    background-image: url("../../img/icon/smallLupa.png");
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+
+    border:1px solid rgb(100, 100, 100);
+
+    outline:none;
+}
+
+    #btnBuscar:hover{
+        background-color: rgb(202, 221, 238);
+        cursor: pointer;
+    }
+
+
+/* detail info */
+
+#detail-info{
+    display:flex;
+    width:100%;
+    height:100%;
+
+    border-radius:0px 5px 5px 0px;
+}
+
+#info-contratante{
+
+    width:100%;
+    height:150px;
+
+    border-radius:5px;
+    display:grid;
+    grid-template-columns: 60% 40%;
+}
+
+#info-pessoal{
+    width:80%;
+    height:100%;
+
+    margin:0;
+}
+
+#contato-pessoal p{
+    font-size:14px;
+    letter-spacing: 0.4px;
 }

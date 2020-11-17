@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+#main-top,#line-nav{
+    z-index:10;
+}
+
 #main-top{
     position: fixed;
     top: 0;
@@ -10,7 +14,9 @@
     padding: 0px 40px;
     width: 100% !important;
     height: 65px;
-    background-color:rgb(13, 94, 151);    
+    background-color:rgb(13, 94, 151); 
+    background: rgb(16,67,126);
+    background: linear-gradient(90deg, rgba(16,67,126,1) 0%, rgba(33,80,182,1) 40%, rgba(0,143,209,1) 100%);
 }
 
 #logo-main{
@@ -31,7 +37,7 @@
     }
 
 .menu{
-    width:700px;
+    width:480px;
     height:100%;
     float: right;
 }
@@ -112,6 +118,8 @@
     font-size:15px;
     font-weight: 600;
     color:rgb(13, 94, 151);
+
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out ;
 }
 
 #line-nav ul li:hover{
@@ -119,4 +127,43 @@
     color:rgb(255, 255, 255);
 
     cursor:pointer;
+}
+
+
+
+
+
+
+/* scroll site */
+
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4374d0;
+  border: 0px none #ffffff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2080cf;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #1d70ed;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 29px none #ffffff;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
