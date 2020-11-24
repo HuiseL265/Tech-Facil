@@ -34,13 +34,16 @@ function detalhar(idRequisicao){
         type: "get",
         url: "./backend/actions/detail-list.act.php?idRequisicao=" + idRequisicao,
         success: function(response) {
-            $('.lista-pedidos').html(response);
+            $('#cont-info').html(response);
+            var collection = $(".detail-status");
+            CorStatus(collection);
         },
         error: function(){
             alert("ocorreu um erro, chama o professor.")
         }
     });
 }
+
 
 
 function CorStatus(classUsed){

@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     margin: 0;
-    padding: 0px 40px;
+    padding: 0px 25px;
     width: 100% !important;
     height: 65px;
     background-color:rgb(13, 94, 151); 
@@ -148,6 +148,11 @@
   background: #4374d0;
   border: 0px none #ffffff;
 }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4374d0;
+  border: 0px none #ffffff;
+}
 ::-webkit-scrollbar-thumb:hover {
   background: #2080cf;
 }
@@ -155,14 +160,14 @@
   background: #1d70ed;
 }
 ::-webkit-scrollbar-track {
-  background: #666666;
+  background: #ffffff;
   border: 29px none #ffffff;
 }
 ::-webkit-scrollbar-track:hover {
-  background: #666666;
+  background: #b9b9b9;
 }
 ::-webkit-scrollbar-track:active {
-  background: #333333;
+  background: #c7c7c7;
 }
 ::-webkit-scrollbar-corner {
   background: transparent;
