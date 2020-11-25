@@ -33,9 +33,38 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
                         <h5>Situação: </h5>
                         <p class='detail-status'>".utf8_encode($conteudo['Status'])."</p>
                     </li>
+                    <li style=margin-top:20px;>
+                        <h5>Orçamento: </h5>
+                        <p class='detail-status'>De R$50 até R$200</p>
+                    </li>
+                    <li>
+                        <h5>Forma de trabalho: </h5>
+                        <p class='detail-status'>Pessoalmente</p>
+                    </li>
                 </ul>
                 <h4>Descrição</h4>
                 <div id='descricao-pedido'>".utf8_encode($conteudo['Contexto'])."</div>
+
+                <div id='detail-contato'>
+                    <h4>Contatos</h4>
+
+                    <ul>
+                        <li>
+                            <img src='./img/redesSociais icon/phone.png' alt='' srcset=''>
+                            <p>(11)98222-4233</p>
+                        </li>
+
+                        <li>
+                            <img src='./img/redesSociais icon/phone.png' alt='' srcset=''>
+                            <p>(11)98222-4233</p>
+                        </li>
+                        
+                        <li>
+                            <img src='./img/redesSociais icon/email.png' alt='' srcset=''>
+                            <p>vitin.aro@hotmail.com</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
             ";        
     }

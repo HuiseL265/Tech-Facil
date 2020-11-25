@@ -10,7 +10,7 @@ require("../actions/SQL Server/connectsql.php");
     <title>Verificar Usuarios</title>
 
     <link rel="stylesheet" href="../../css/backend css/topo.css">
-    <link rel="stylesheet" href="../../css/backend css/tableUsers.css">
+    <link rel="stylesheet" href="../../css/backend css/table-model.css">
     <link rel="stylesheet" href="../../css/backend css/verifyUsers.css">
 </head>
 <body>
@@ -34,7 +34,7 @@ include("topo.php");
 
      //criação dos identificados das colunas
     echo   "<div class='table-list'>
-    <table>
+    <table style='margin:150px auto;'>
     <tr style=background-color:#3aa47e;>
         <th>ID</th>
         <th>Nome</th>

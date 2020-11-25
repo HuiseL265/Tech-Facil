@@ -19,6 +19,7 @@ function filtrar(texto,tipo) {
         success: function(response) {
             $('.lista-pedidos').html(response);
             var collection = $(".lista-status");
+            
             CorStatus(collection);
         },
         error: function(){

@@ -224,11 +224,15 @@
 }
 
 #info-pedido{
-    margin-bottom:20px;
+    margin-bottom:30px;
 }
 
 #info-pedido li{
     margin:5px 0px;
+}
+
+#info-pedido h5{
+    color:#155fcf;
 }
 
 #pedido-cont > #info-pedido h5,
@@ -237,13 +241,17 @@
     font-size:14px;
 }
 
+#pedido-cont h4{
+    color:#155fcf;
+}
+
 #pedido-cont h4::after{
     display:flex;
     content:"";
-    width:70px;
-    height:2px;
+    width:80px;
+    height:1.8px;
 
-    background-color:rgb(70, 70, 70);
+    background-color:#155fcf;
 
     margin:2px 0px 5px 1px;
 }
@@ -261,6 +269,36 @@
     line-height: 18px;
 }
 
+
+#detail-contato{
+    margin:50px 0px 30px 0px;
+}
+
+#detail-contato ul li{
+    display:flex;
+    align-items: center;
+
+    margin-top:5px;
+}
+
+#detail-contato h4,
+#detail-contato p{
+    font-size:14px;
+}
+
+#detail-contato ul li p{
+    display:inline-block;
+    margin-left:5px;
+}
+
+#pedido-cont #detail-contato h4::after{
+    width:65px;
+}
+
+#detail-contato img{
+    width:20px;
+    height:20px;
+}
 
 
 

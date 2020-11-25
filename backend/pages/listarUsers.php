@@ -39,7 +39,7 @@
         <h3 class="title-content">Tabela atual</h3>
 
         <div class="table-list">
-            <table>
+            <table >
                 <tr>
                     <th>ID</th>
                     <th>NOME</th>
