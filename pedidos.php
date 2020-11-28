@@ -31,6 +31,7 @@
                 <label for="software-radio">Software</label>
             </p>
 
+            <!--
             <h5>Status</h5>
             <p class="radio-buttons">
                 <input type="radio" name="radio-filtro" id="aberto-radio" value="Aberto" onclick="filtrar(this.value,'status')">
@@ -41,6 +42,8 @@
                 <input type="radio" name="radio-filtro" id="fechado-radio" value="Fechado" onclick="filtrar(this.value,'status')">
                 <label for="fechado-radio">Fechado</label>
             </p>
+
+            -->
         </div>
         <div id="cont-lista">
             <h3>Lista</h3>

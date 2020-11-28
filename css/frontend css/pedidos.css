@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgb(255, 247, 238);
+}
+
 #container-req{
     display:flex;
     
@@ -271,32 +275,33 @@
 }
 
 
-#detail-contato{
+.detail-contato{
     margin:20px 0px 0px 0px;
 }
 
-#detail-contato ul li{
+.detail-contato ul li{
     display:flex;
     align-items: center;
 
     margin-top:5px;
 }
 
-#detail-contato h4,
-#detail-contato p{
+.detail-contato h4,
+.detail-contato p{
     font-size:14px;
 }
 
-#detail-contato ul li p{
+.detail-contato ul li p{
     display:inline-block;
     margin-left:5px;
 }
 
-#pedido-cont #detail-contato h4::after{
+#pedido-cont .detail-contato h4::after{
     width:65px;
+    height:1.5px;
 }
 
-#detail-contato img{
+.detail-contato img{
     width:20px;
     height:20px;
 }
@@ -310,35 +315,34 @@
 
 
 
-/*scroll do detail-info*/
+/*scroll do detail-info e list*/
 
 
-#cont-info::-webkit-scrollbar {
+#cont-info::-webkit-scrollbar,#cont-lista::-webkit-scrollbar {
     width: 10px;
   }
 
-  #cont-info::-webkit-scrollbar:hover {
+  #cont-info::-webkit-scrollbar:hover,#cont-lista::-webkit-scrollbar:hover {
     width: 10px !important;
   }
-  #cont-info::-webkit-scrollbar-thumb {
+  #cont-info::-webkit-scrollbar-thumb,#cont-lista::-webkit-scrollbar-thumb {
     background: #00bd19;
   }
-  #cont-info::-webkit-scrollbar-thumb:hover {
+  #cont-info::-webkit-scrollbar-thumb:hover,#cont-lista::-webkit-scrollbar-thumb:hover {
     background: #18b132;
   }
-  #cont-info::-webkit-scrollbar-thumb:active {
-    background: #11ad2b;
+  #cont-info::-webkit-scrollbar-thumb:active,#cont-lista::-webkit-scrollbar-thumb:active {
+    background: #0dd42e;
   }
-  #cont-info::-webkit-scrollbar-track {
-    background: #e7e7e7;
-    border: 1px solid #858585;
+  #cont-info::-webkit-scrollbar-track,#cont-lista::-webkit-scrollbar-track {
+    background: #ffffff;
   }
-  #cont-info::-webkit-scrollbar-track:hover {
-    background: #cccccc;
+  #cont-info::-webkit-scrollbar-track:hover,#cont-lista::-webkit-scrollbar-track:hover {
+    background: #e6e6e6;
   }
-  #cont-info::-webkit-scrollbar-track:active {
-    background: #8d8d8d;
+  #cont-info::-webkit-scrollbar-track:active,#cont-lista::-webkit-scrollbar-track:active {
+    background: #cacaca;
   }
-  #cont-info::-webkit-scrollbar-corner {
+  #cont-info::-webkit-scrollbar-corner,#cont-lista::-webkit-scrollbar-corner {
     background: transparent;
   }

@@ -38,6 +38,18 @@
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                 out labore et dolore magna aliqua."</p>
         </div>
+
+        <div id="cont-sobre">
+            <div id="foto-sobre">
+
+            </div>
+
+            <div id="sobre-content">
+                <h4>O que é a TechFacil?</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    out labore et dolore magna aliqua.</p>
+            </div>
+        </div>
             
 
         <?php include('rodape.php') ?>
