@@ -16,7 +16,7 @@
     height: 65px;
     background-color:rgb(13, 94, 151); 
     background: rgb(16,67,126);
-    background: linear-gradient(90deg, rgba(16,67,126,1) 0%, rgba(33,80,182,1) 40%, rgba(0,143,209,1) 100%);
+    background: linear-gradient(90deg, rgba(16,67,126,1) 0%, rgba(33,80,182,1) 40%, rgb(0, 107, 207) 100%);
 }
 
 #logo-main{
@@ -73,7 +73,7 @@
     margin-top:15px;
     font-size: 20px;
     color: white;
-    background:#2ba375;
+    background:#0aaa5a;
 
     border:0;
     border-radius: 2px;

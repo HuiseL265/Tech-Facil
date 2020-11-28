@@ -314,24 +314,20 @@
 
 
 #cont-info::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
   }
 
   #cont-info::-webkit-scrollbar:hover {
     width: 10px !important;
   }
-  #cont-info::-webkit-scrollbar-button {
-    width: 0px;
-    height: 0px;
-  }
   #cont-info::-webkit-scrollbar-thumb {
-    background: #1a94f8;
+    background: #00bd19;
   }
   #cont-info::-webkit-scrollbar-thumb:hover {
-    background: #2080cf;
+    background: #18b132;
   }
   #cont-info::-webkit-scrollbar-thumb:active {
-    background: #155fcf;
+    background: #11ad2b;
   }
   #cont-info::-webkit-scrollbar-track {
     background: #e7e7e7;

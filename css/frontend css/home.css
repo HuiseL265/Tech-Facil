@@ -4,12 +4,14 @@
 #cont-topo{
     margin-top:65px;
     width: 100%;
-    height: 470px;
+    height: 500px;
 
-    background-color: hsla(0, 0%, 93%, 0.83);
+    background-color: hsla(0, 0%, 100%, 0.83);
 
-    background-image: url('../../img/wallpaper-home.jfif');
+    background-image: url('../../img/wallpaper-home.jpg');
     background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -190px;
 }
 
 #cont-cadastro{
@@ -24,14 +26,14 @@
 }
 
 #cont-cadastro form ul{
-    width:320px;
+    width:340px;
     height:auto;
     padding:10px;
 
-    background-color:white;
+    background-color:rgb(0, 79, 182);
+    box-shadow: 0px 0px 10px rgba(0, 17, 29, 0.7);
 
-    border:1px solid rgb(114, 114, 114);
-    border-radius:10px;
+    border-radius:5px;
 }
 
 #cont-cadastro form ul li{
@@ -42,10 +44,24 @@
 #cont-cadastro form ul li p{
     font-size:18px;
     text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 
     text-align: center;
+    
+    color:rgb(255, 255, 255);
 }
+/*
+#cont-cadastro form ul li p::after{
+    content:"";
+    display:block;
 
+    width:100%;
+    height:1px;
+    margin:5px 0px 0px 0px;
+    background-color: rgb(255, 255, 255);
+}
+*/
 #cont-cadastro form ul li input{
     width:100%;
     height:35px;
@@ -66,7 +82,7 @@
 
     border:none;
     border-radius:1px;
-    background-color:rgb(13, 94, 151);
+    background-color:rgb(13, 151, 24);
     font-weight: 600;
     text-transform: uppercase;
     color:white;
@@ -75,10 +91,10 @@
 }
 
 #cont-cadastro form ul li button:hover{
-    box-shadow: 0px 0px 5px rgb(13, 94, 151);
+    box-shadow: 0px 0px 5px rgb(18, 151, 13);
     cursor:pointer;
 }
-
+/*
 #cont-cadastro form ul li:last-child::before{
     content:"";
     display:block;
@@ -86,9 +102,9 @@
     width:100%;
     height:1px;
     margin:0px 0px 10px 0px;
-    background-color: rgb(114, 114, 114);
+    background-color: rgb(255, 255, 255);
 }
-
+*/
 /* avaliação de usuarios */
 
 #avalUsers-cont{

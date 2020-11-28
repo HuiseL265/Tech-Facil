@@ -12,20 +12,19 @@
 <body>
 
     <?php include('main.php') ?>
-
-    
+ 
         <div id="cont-topo">
 
             <div id="cont-cadastro">
 
                 <form action="cadastro.php" method="post">
                     <ul>
-                        <li><p>Cadastre-se</p></li>
+                        <li><p>Cadastrar-se</p></li>
                         <li><input type="text" id="nome" name="nome" required="required" placeholder="Nome Completo"></li>
                         <li><input type="email" id="email" name="email" required="required" placeholder="Email"></li>
                         <li><input type="password" name="senha"  id="senha" required="required" placeholder="Senha"></li>
                         <li><input type="password" name="senha2" id="senha2" required="required" placeholder="Confirmar Senha"></li>
-                        <li><button type="submit" id="confirm">REGISTRAR-SE</button></li>
+                        <li><button type="submit" id="confirm">cadastrar</button></li>
                     </ul>       
                 </form>
 
