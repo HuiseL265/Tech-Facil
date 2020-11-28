@@ -1,136 +1,136 @@
-* {
-    margin:0;
-    padding:0;
+*{
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+}
+#cont-topo{
+    margin-top:65px;
+    width: 100%;
+    height: 470px;
+
+    background-color: hsla(0, 0%, 93%, 0.83);
+
+    background-image: url('../../img/wallpaper-home.jfif');
+    background-repeat: no-repeat;
 }
 
-body{
-    background-color: hsla(205, 100%, 20%, 0.99);
-}
-.header{
-    
-}
-
-.info{
-    width: 1000px;
-    height: 500px;
-    position: fixed;
-    top: 20%;
-    left: 100px;
-
-    background-color: hsla(205, 100%, 20%, 0.83);
-    border-radius: 15px;
-}
-
-.info p{
-    font-size: 30px;
-    color: white;
-}
-
-.info img{
-    width: 1000px;
-    border-radius: 10px;
-    opacity: 0.8;
-
-}
-
-.form-registrar{
-    position: fixed;
-    top: 20%;
-    right: 300px;
-    
-    width: 500px;
-    height: 500px;
-}
-
-
-
-/* CODIGO DO ALANZINHO */
-
-.items{
-    float:right;
-    width:380px;
-    height:450px;
-    border-radius:10px;
-    background-color:rgba(46, 46, 46,1);	
+#cont-cadastro{
+    width:600px;
+    height:100%;
 
     display:flex;
-}
-    .items table{
-        margin:auto;
-        border-collapse: separate;
-        border-spacing: 0 10px;
-        display:flex;
-    }
-
-.items table h2{
-    text-align: center;
-    text-shadow: 1.5px 1.5px 3px #51af3f;
-    font-size:50px;
-    text-decoration:line;
-}
-
-tr td:first-child{
-    font-size:20px;
-    text-align:right;
-    font-weight: bold;
-    color:white;
-}
-
-td input, #tipoConta{
-  width: 200px;
-  outline: 0;
-  border: 0;
-  font-size: 20px;
-  padding: 5px 0 5px 0;
-  border-radius: 10px;
-}
-
-#tipoConta{
-    height: 35px;
-    width:200px;
-    font-size: 16px;
-    display:flex;
-    justify-content:space-around;
     align-items: center;
-    border-radius: 10px;
-    background: white;
+    justify-content: center;
+    
+    float:right;
 }
 
-.items a{
-    float:left;
-    color: #808080;
-    font-weight: bold;
-    text-decoration:none;
-    margin:auto;
+#cont-cadastro form ul{
+    width:320px;
+    height:auto;
+    padding:10px;
 
+    background-color:white;
+
+    border:1px solid rgb(114, 114, 114);
+    border-radius:10px;
 }
-.items a:hover{
-        text-decoration: underline;
-    }
-        #confirm{
-            right:2%;
-            position:relative;
-            color:black;
-            background: #33df7a;
 
-            width: 180px;
-            height: 45px;
+#cont-cadastro form ul li{
+    display:block;
+    width:100%;
+}
 
-            border-radius: 5px;
+#cont-cadastro form ul li p{
+    font-size:18px;
+    text-transform: uppercase;
 
-            font-size: 16px;
-            font-weight: bold;
+    text-align: center;
+}
 
-            box-shadow:0px 4px 16px rgba(7, 206, 83, 0.185);
+#cont-cadastro form ul li input{
+    width:100%;
+    height:35px;
 
-            margin:0;
-        }
+    margin:10px 0;
 
-            #confirm:hover{
-                background-color: #ffffff;
-                text-decoration:none;
-                cursor: pointer;
-        
-            }
+    padding:5px;
+
+    font-size:14px;
+
+    border:1px solid rgb(114, 114, 114);
+    border-radius:4px;
+}
+
+#cont-cadastro form ul li button{
+    width:60%;
+    height:35px;
+
+    border:none;
+    border-radius:1px;
+    background-color:rgb(13, 94, 151);
+    font-weight: 600;
+    text-transform: uppercase;
+    color:white;
+
+    margin-left:19%;
+}
+
+#cont-cadastro form ul li button:hover{
+    box-shadow: 0px 0px 5px rgb(13, 94, 151);
+    cursor:pointer;
+}
+
+#cont-cadastro form ul li:last-child::before{
+    content:"";
+    display:block;
+
+    width:100%;
+    height:1px;
+    margin:0px 0px 10px 0px;
+    background-color: rgb(114, 114, 114);
+}
+
+/* avaliação de usuarios */
+
+#avalUsers-cont{
+    width:100%;
+    height:150px;
+    
+    padding:0% 15% 0% 15%;
+    padding-top:10px;
+    padding-bottom:10px;
+
+    border:1px solid rgb(102, 102, 102);
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+#avalUser-foto{
+    width:60px;
+    height:60px;
+
+    overflow:hidden;
+    
+    background-color: rgb(134, 134, 134);
+    border:1px solid rgb(61, 61, 61);
+    border-radius:50px; 
+    
+    margin-bottom:5px;
+}
+
+#avalUser-foto img{
+    width:100%;
+    height:100%;
+}
+
+#avalUsers-cont p{
+    width:400px;
+
+    line-height: 1.3;
+    text-align: center;
+
+    color:rgb(92, 92, 92);
+}

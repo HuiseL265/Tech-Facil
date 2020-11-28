@@ -10,6 +10,13 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
 if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = $idRequisicao", $params, $options)){
     if(sqlsrv_num_rows($query) === 1){
         $conteudo = sqlsrv_fetch_array($query, SQLSRV_FETCH_ASSOC);
+
+        $verifyContents = Array($conteudo['Telefone1'],$conteudo['Telefone2'],$conteudo['EmailSecundario']);
+
+        $tel1 = $conteudo['Telefone1'];
+        $tel2 = $conteudo['Telefone2'];
+        $emailSec = $conteudo['EmailSecundario'];
+        
         
             echo"
             <div id='topo-cont'>
@@ -35,11 +42,11 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
                     </li>
                     <li style=margin-top:20px;>
                         <h5>Orçamento: </h5>
-                        <p class='detail-status'>De R$50 até R$200</p>
+                        <p>De R$50 até R$200</p>
                     </li>
                     <li>
                         <h5>Forma de trabalho: </h5>
-                        <p class='detail-status'>Pessoalmente</p>
+                        <p>Pessoalmente</p>
                     </li>
                 </ul>
                 <h4>Descrição</h4>
@@ -48,22 +55,48 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
                 <div id='detail-contato'>
                     <h4>Contatos</h4>
 
-                    <ul>
-                        <li>
-                            <img src='./img/redesSociais icon/phone.png' alt='' srcset=''>
-                            <p>(11)98222-4233</p>
-                        </li>
+                    <ul>";
 
+                    if($tel1 == "" or $tel1 == NULL){
+                        $tel1 = "(Não informado)";
+                    }
+
+                    if($tel2 == "" or $tel2 == NULL){
+                        $tel2 = "(Não informado)";
+                    }
+
+                    if($emailSec == "" or $emailSec == NULL){
+                        $emailSec = "(Não informado)";
+                    }
+
+                    echo "
                         <li>
-                            <img src='./img/redesSociais icon/phone.png' alt='' srcset=''>
-                            <p>(11)98222-4233</p>
-                        </li>
-                        
+                            <img src='./img/redesSociais icon/phone.png' alt='Telefone1' srcset=''>
+                            <p>".$tel1."</p>
+                            </li>
+                        ";
+
+                    echo "
                         <li>
-                            <img src='./img/redesSociais icon/email.png' alt='' srcset=''>
-                            <p>vitin.aro@hotmail.com</p>
-                        </li>
-                    </ul>
+                            <img src='./img/redesSociais icon/phone.png' alt='Telefone2' srcset=''>
+                            <p>".$tel2."</p>
+                        </li> 
+                        ";  
+                          
+
+                            
+                    echo "
+                        <li>
+                            <img src='./img/redesSociais icon/email.png' alt='Email' srcset=''>
+                            <p>".$emailSec."</p>
+                        </li> 
+                        ";  
+                    
+/*
+                        <li>
+                            
+                        </li>*/
+                        echo "</ul>
                 </div>
             </div>
             ";        

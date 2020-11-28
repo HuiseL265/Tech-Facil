@@ -52,6 +52,7 @@
 
 #cont-lista{
     width:400px;
+    overflow:scroll;
 }
 
 #cont-info{
@@ -271,7 +272,7 @@
 
 
 #detail-contato{
-    margin:50px 0px 30px 0px;
+    margin:20px 0px 0px 0px;
 }
 
 #detail-contato ul li{
