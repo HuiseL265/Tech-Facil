@@ -1,0 +1,263 @@
+*{
+
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* botões para criar req. */
+
+#CriarReq{
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    color: black;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    float: right;
+}
+
+#CriarReq:hover{
+    border-color:rgb(6, 185, 81);
+    color:rgb(6, 185, 81);
+}
+
+    #CriarReq p{
+        margin-top: 6px;
+        text-decoration: none;
+    }
+
+/*lista de requisições */
+
+#lista-requisicoes{
+    width:500px;
+    height:auto;
+
+    margin:10px auto;
+}
+
+#lista-requisicoes > p:first-child{
+    font-size:18px;
+    font-weight: 600;
+    margin-top:10px;
+    display:inline-block;
+}
+
+.conteudos-lista{
+    border-style:solid;
+    border-color: black;
+    color:black;
+    width: 80%;
+    height: auto;
+    max-height: 150px;
+    padding-bottom: 10px;
+    overflow:hidden;
+}
+
+.conteudos-lista h1{ 
+    margin: 10px;
+    font-size: 20px;
+    float: left;
+}
+
+
+.conteudos-lista h2{
+    margin: 10px;
+    font-size: 20px;
+    float: right;
+}
+
+
+.conteudos-lista p{
+    width: 85%;
+    text-align: justify;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+}
+
+    /* botoes lista-conteudo */
+
+    .Manipulacao img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .Manipulacao{
+        margin-top: 5px;
+        margin-right: 10px;
+        height: auto;
+        display: inline-block;
+        width: 30px;
+        float: right;
+    }
+
+    /* ---------------------- */
+
+/* ---------------------- */
+
+.popinfo{
+    width: 50%;
+    height: auto;
+    border-style: solid;
+    display:none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 5% auto;
+    background-color: white;
+}
+
+
+.Topo{
+    margin: 0;
+    text-align: center;
+    border-bottom-style: double;
+}
+
+.Topo h1{
+    margin-left: 5%;
+    margin-top: 15px;
+    font-size: 24px;
+
+}
+
+.InfoServ{
+    padding:20px;
+}
+
+.InfoServ ul{
+    padding:0px;
+}
+
+.InfoServ ul li {
+    list-style: none;
+}
+
+.InfoServ ul li p,
+.InfoServ ul li h1{
+    display: inline-block;
+}
+
+.popinfo select{
+    margin-top: 10px 0px 5px 0px;
+    padding:5px;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 5px;
+
+}
+#CampoOutros{
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 80%;
+    height: 32px;
+    font-size: 24px;
+    display: none;
+    border-radius: 5px;
+}
+
+.popinfo h3{
+    display: inline-block;
+    margin:0;
+
+    font-size: 18px;
+    color:rgb(29, 94, 216);
+}
+
+.popinfo img{
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    float: right;
+}
+
+.popinfo h2{
+    font-size: 14px;
+}
+
+.InfoServ p{
+    font-size:20px;
+    margin:0;
+    margin-bottom: 10px;
+}
+.popinfo h2{
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.InfoServ select{
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom:10px;
+    font-size: 14px;
+}
+.InfoServ input{
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.Descricao textarea{
+    font-size: 12px;
+    display:block;
+    width: 80%;
+    height:200px;
+    padding:10px;
+
+    resize: none;
+}
+
+.Descricao > h3::after{
+    content: "";
+    display:block;
+    margin: 5px 0px 10px 0px;
+    width: 80px;
+    height:2px;
+
+    background-color: rgb(29, 94, 216);
+}
+.Descricao p{
+    margin:10px;
+}
+
+
+
+
+
+.Confirmar{
+    background-color:white;
+    text-align: center;
+    width: 40%;
+    border-style: solid;
+    height: auto;
+    padding: 10px;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 45%;
+    transform: translateY(-50%); 
+    margin: 0 auto;
+    position: absolute;
+}
+
+
+
+.Confirmar h1{
+    margin: 10px;
+}
+.Confirmar button{
+    margin-bottom: 10px;
+    width: 20%;
+}
+
+.orcamento{
+    width:100px;
+    height:auto;
+}

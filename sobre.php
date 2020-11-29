@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>SOBRE</title>
+    <title>Sobre</title>
     <link rel="stylesheet" type="text/css" href="css/frontend css/main.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/frontend css/sobre.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/frontend css/rodape.css" media="screen" />

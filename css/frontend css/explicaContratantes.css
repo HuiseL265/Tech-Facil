@@ -1,0 +1,74 @@
+#img1 {
+    text-align: center;
+    margin-top: 10px;
+    background-color: red;
+    min-height: 100px;
+    width: 19%;
+    float: left;
+}
+
+#text1 {
+    text-align: center;
+    margin-top: 10px;
+    background-color: yellow;
+    min-height: 100px;
+    width: 80%;
+    float: right;
+}
+
+#img2 {
+    text-align: center;
+    margin-top: 10px;
+    clear: both;
+    background-color: blue;
+    min-height: 100px;
+    width: 19%;
+    float: left;
+}
+
+#text2 {
+    text-align: center;
+    margin-top: 10px;
+    background-color: green;
+    min-height: 100px;
+    width: 80%;
+    float: right;
+}
+
+#img3 {
+    text-align: center;
+    margin-top: 10px;
+    clear: both;
+    background-color: white;
+    min-height: 100px;
+    width: 19%;
+    float: left;
+}
+
+#text3 {
+    text-align: center;
+    margin-top: 10px;
+    background-color: orange;
+    min-height: 100px;
+    width: 80%;
+    float: right;
+}
+
+#img4 {
+    text-align: center;
+    margin-top: 10px;
+    clear: both;
+    background-color: palevioletred;
+    min-height: 100px;
+    width: 19%;
+    float: left;
+}
+
+#text4 {
+    text-align: center;
+    margin-top: 10px;
+    background-color: magenta;
+    min-height: 100px;
+    width: 80%;
+    float: right;
+}

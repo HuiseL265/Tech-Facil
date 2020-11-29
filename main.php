@@ -1,7 +1,5 @@
   <?php
-
   require("backend/actions/SQL Server/connectsql.php");
-
   ?>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -33,5 +31,6 @@
             <a href="home.php"><li>Home</li></a>            
             <a href="pedidos.php"><li>Pedidos</li></a>  
             <a href="sobre.php"><li>Sobre</li></a>  
+            <a href="comoFunciona.php"><li style="width:150px;">Como Funciona?</li></a>
             </ul>
     </nav>
