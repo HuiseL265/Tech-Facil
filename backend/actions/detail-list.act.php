@@ -60,38 +60,58 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
 
                     if($tel1 == "" or $tel1 == NULL){
                         $tel1 = "(Não informado)";
-                    }
 
-                    if($tel2 == "" or $tel2 == NULL){
-                        $tel2 = "(Não informado)";
-                    }
-
-                    if($email == "" or $email == NULL){
-                        $email = "(Não informado)";
-                    }
-
-                    echo "
+                        echo "
                         <li>
                             <img src='./img/redesSociais icon/phone.png' alt='Telefone1' srcset=''>
                             <p>".$tel1."</p>
                         </li>
                         ";
+                    }else {
+                        echo "
+                        <li>
+                        <img src='./img/redesSociais icon/phone.png' alt='Telefone1' srcset=''>
+                        <p><a href=https://api.whatsapp.com/send?l=pt_BR&phone=".$tel1."&text=Olá,%20sou%20um%20dos%20freelancers%20vindo%20dá%20Techfacil%20e%20tenho%20interesse%20em%20auxiliar%20com%20o%20seu%20problema! target=_blank>".$tel2."</a></p>
+                        </li>
+                        ";
+                    }
 
-                    echo "
+                    if($tel2 == "" or $tel2 == NULL){
+                        $tel2 = "(Não informado)";
+
+                        echo "
                         <li>
                             <img src='./img/redesSociais icon/phone.png' alt='Telefone2' srcset=''>
                             <p>".$tel2."</p>
                         </li> 
-                        ";  
-                          
+                        ";
+                    }else {
+                        echo "
+                        <li>
+                        <img src='./img/redesSociais icon/phone.png' alt='Telefone1' srcset=''>
+                        <p><a href=https://api.whatsapp.com/send?l=pt_BR&phone=".$tel2."&text=Olá,%20sou%20um%20dos%20freelancers%20vindo%20dá%20Techfacil%20e%20tenho%20interesse%20em%20auxiliar%20com%20o%20seu%20problema!  target=_blank>".$tel2."</a></p>
+                        </li>
+                        ";
+                    }
 
-                            
-                    echo "
+                    if($email == "" or $email == NULL){
+                        $email = "(Não informado)";
+
+                        echo "
                         <li>
                             <img src='./img/redesSociais icon/email.png' alt='email' srcset=''>
                             <p>".$email."</p>
                         </li> 
                         ";  
+                    }
+
+                    
+
+                      
+                          
+
+                            
+                    
                         echo "</ul>
                 </div>";
 
