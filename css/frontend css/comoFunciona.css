@@ -1,0 +1,100 @@
+#explicacao{
+    width:auto;
+    height:620px;
+    padding:15px 0px;
+
+    border-bottom: 2px solid #CCC;
+    border-top: 2px solid #CCC;
+}
+
+#header-exp h1 {
+    color: #5992c2;
+}
+
+#explicacao h2 {
+    color: #5992c2;
+    text-align: left;
+    margin: 2px;
+}
+
+#exp-cont {
+    background-color: white;
+    width:1060px;
+    margin:130px auto 50px auto;
+    text-align: center;
+}
+
+#header-exp > ul {
+    margin:20px auto 15px auto;
+    border: 1px solid white;
+    background-color: white;
+
+    width:500px;
+    height: 50px;
+}
+
+#header-exp > ul li {
+    display: inline-flex;
+
+    border-radius: 10px;
+    border: 1px solid rgb(18, 139, 219);
+    background-color: white;
+    
+    font-size: 20px;
+    text-align: center;
+}
+
+#header-exp > ul li :hover {
+    background-color: rgb(18, 139, 219);
+    color: white;
+    border-radius: 10px;
+}
+
+#header-exp > ul > li > a {
+    color: rgb(18, 139, 219);
+    width:200px;
+    height:50px;
+    padding-top:12px;
+
+    text-decoration: none;
+}
+
+
+
+
+.img-exp {
+    text-align: center;
+    background-color: white;
+    height:auto;
+    display:flex;
+    width: 15%;
+    float: left;
+    border: 2px solid #CCC;
+    border-radius: 10px;
+
+    justify-content: center;
+}
+
+.text-exp {
+    margin:5px auto 0px auto;
+    padding-bottom:5px;
+    text-align: left;
+    background-color: white;
+    height: auto;
+    line-height:1.4;
+    width: 83%;
+    float: right;
+    border-bottom: 2px solid #CCC;
+}
+
+.text-exp:last-child {
+    border-bottom: none;
+}
+
+.escolhaAtiva{
+    background-color: rgb(18, 139, 219) !important;
+}
+
+.escolhaAtiva a {
+    color:white !important;
+}

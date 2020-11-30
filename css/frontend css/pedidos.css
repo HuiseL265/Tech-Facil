@@ -296,6 +296,10 @@ body{
     margin-left:5px;
 }
 
+.detail-contato ul li p a{
+    color:#00a316;
+}
+
 #pedido-cont .detail-contato h4::after{
     width:65px;
     height:1.5px;

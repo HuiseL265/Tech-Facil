@@ -62,36 +62,55 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
                         $tel1 = "(Não informado)";
 
                         echo "
-                        <li>
-                            <img src='./img/redesSociais icon/phone.png' alt='Telefone1' srcset=''>
-                            <p>".$tel1."</p>
-                        </li>
+                            <li>
+                                <img src='./img/redesSociais icon/phone.png' alt='Telefone2' srcset=''>
+                                <p>".$tel1."</p>
+                            </li> 
                         ";
                     }else {
-                        echo "
-                        <li>
-                        <img src='./img/redesSociais icon/phone.png' alt='Telefone1' srcset=''>
-                        <p><a href=https://api.whatsapp.com/send?l=pt_BR&phone=".$tel1."&text=Olá,%20sou%20um%20dos%20freelancers%20vindo%20dá%20Techfacil%20e%20tenho%20interesse%20em%20auxiliar%20com%20o%20seu%20problema! target=_blank>".$tel2."</a></p>
-                        </li>
-                        ";
+                        if(strlen($tel1) == 11 and substr($tel1,2,1) == 9){
+                            echo "
+                            <li>
+                            <img src='./img/redesSociais icon/Whatsapp-green.png' alt='Telefone2' srcset=''>
+                            <p><a href=https://api.whatsapp.com/send?l=pt_BR&phone=".$tel1."&text=Olá,%20sou%20um%20dos%20freelancers%20vindo%20dá%20Techfacil%20e%20tenho%20interesse%20em%20auxiliar%20com%20o%20seu%20problema!  target=_blank>".$tel1."</a></p>
+                            </li>
+                            ";
+                        }else{
+                            echo "
+                            <li>
+                                <img src='./img/redesSociais icon/phone.png' alt='Telefone2' srcset=''>
+                                <p>".$tel1."</p>
+                            </li> 
+                            ";
+                        }
                     }
 
                     if($tel2 == "" or $tel2 == NULL){
                         $tel2 = "(Não informado)";
 
                         echo "
-                        <li>
-                            <img src='./img/redesSociais icon/phone.png' alt='Telefone2' srcset=''>
-                            <p>".$tel2."</p>
-                        </li> 
+                            <li>
+                                <img src='./img/redesSociais icon/phone.png' alt='Telefone2' srcset=''>
+                                <p>".$tel2."</p>
+                            </li> 
                         ";
                     }else {
-                        echo "
-                        <li>
-                        <img src='./img/redesSociais icon/phone.png' alt='Telefone1' srcset=''>
-                        <p><a href=https://api.whatsapp.com/send?l=pt_BR&phone=".$tel2."&text=Olá,%20sou%20um%20dos%20freelancers%20vindo%20dá%20Techfacil%20e%20tenho%20interesse%20em%20auxiliar%20com%20o%20seu%20problema!  target=_blank>".$tel2."</a></p>
-                        </li>
-                        ";
+                        if(strlen($tel2) === 11 and substr($tel2,2,1) === 9){
+                            echo "
+                            <li>
+                            <p>
+                            <img src='./img/redesSociais icon/Whatsapp-green.png' alt='Telefone2' srcset=''>
+                            <a href=https://api.whatsapp.com/send?l=pt_BR&phone=".$tel2."&text=Olá,%20sou%20um%20dos%20freelancers%20vindo%20dá%20Techfacil%20e%20tenho%20interesse%20em%20auxiliar%20com%20o%20seu%20problema!  target=_blank>".$tel2."</a></p>
+                            </li>
+                            ";
+                        }else{
+                            echo "
+                            <li>
+                                <img src='./img/redesSociais icon/phone.png' alt='Telefone2' srcset=''>
+                                <p>".$tel2."</p>
+                            </li> 
+                            ";
+                        }
                     }
 
                     if($email == "" or $email == NULL){
@@ -103,14 +122,15 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
                             <p>".$email."</p>
                         </li> 
                         ";  
+                    }else{
+                        echo "
+                        <li>
+                            <img src='./img/redesSociais icon/email.png' alt='email' srcset=''>
+                            <p>".$email."</p>
+                        </li> 
+                        ";  
                     }
-
-                    
-
-                      
-                          
-
-                            
+               
                     
                         echo "</ul>
                 </div>";
