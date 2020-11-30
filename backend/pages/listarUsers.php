@@ -18,6 +18,7 @@
 <body>
 
     <div id="container-tables">
+        <!--
         <h4 class="title-content">Filtros</h4>
         <div id="filters-table">
             <label for="todos-filter">
@@ -37,7 +38,7 @@
         </div>
 
         <h3 class="title-content">Tabela atual</h3>
-
+-->
         <div class="table-list">
             <table >
                 <tr>

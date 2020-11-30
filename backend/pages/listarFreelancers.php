@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="../../css/backend css/topo.css">
     <link rel="stylesheet" href="../../css/backend css/main.css">
-    <link rel="stylesheet" href="../../css/backend css/tableUsers.css">
+    <link rel="stylesheet" href="../../css/backend css/table-model.css">
 
 </head>
 <body>
@@ -23,7 +23,7 @@
 include('topo.php');
 ?>
 
-    <div class="table-list">
+    <div class="table-list" style="margin:150px auto;display:flex;justify-content:center;">
         <table>
             <tr style="background-color:#3a3ba4;">
                 <th>ID</th>

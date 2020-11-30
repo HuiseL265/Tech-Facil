@@ -22,12 +22,7 @@
         provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório 
         Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
         Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório</p>
+        Texto provisório Texto provisório </p>
     </div>
     <div class="Logo">
         <img src="img/techFacil img/TechFacil.png" alt="TechFacil">
@@ -38,12 +33,7 @@
         <p style="text-align:justify;">Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto
         provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
         Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório</p>
+        Texto provisório Texto provisório </p>
     </div>
     <div class="Valores">
         <h2 class="subtitle">Valores</h2>
@@ -51,11 +41,7 @@
         <p style="text-align:justify;">Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto
         provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
         Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório</p>
+        Texto provisório </p>
     </div>
     <div class="visao">
         <h2 class="subtitle">Visão</h2>
@@ -63,11 +49,7 @@
         <p style="text-align:justify;">Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto
         provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
         Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório Texto provisório
-        Texto provisório Texto provisório</p>
+        Texto provisório </p>
     </div>
     <div class="RedesSociais" id="RS_About">
         <h3>Siga-nos nas redes sociais :)</h3>

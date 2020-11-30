@@ -1,28 +1,55 @@
-#explicacao{
-    width:auto;
-    height:620px;
-    padding:15px 0px;
-
-    border-bottom: 2px solid #CCC;
-    border-top: 2px solid #CCC;
-}
-
-#header-exp h1 {
-    color: #5992c2;
-}
-
-#explicacao h2 {
-    color: #5992c2;
-    text-align: left;
-    margin: 2px;
-}
-
 #exp-cont {
     background-color: white;
     width:1060px;
     margin:130px auto 50px auto;
     text-align: center;
 }
+
+
+.text-exp {
+    margin:5px auto 0px auto;
+    padding-bottom:5px;
+    text-align: left;
+    background-color: white;
+    height: auto;
+    line-height:1.4;
+    float: right;
+    border-bottom: 2px solid #CCC;
+}
+
+
+#images-exp{
+    width:20%;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+}
+
+#cont-txts{
+    width:80%;
+}
+
+
+#explicacao{
+    width:100%;
+    height:fit-content;
+    display: flex;
+    flex-direction: row;
+
+    border-bottom: 2px solid #CCC;
+    border-top: 2px solid #CCC;
+}
+
+#cont-txts h2 {
+    color: #5992c2;
+    text-align: left;
+    margin: 2px;
+}
+
+#header-exp h1 {
+    color: #5992c2;
+}
+
 
 #header-exp > ul {
     margin:20px auto 15px auto;
@@ -59,32 +86,17 @@
     text-decoration: none;
 }
 
-
-
-
 .img-exp {
     text-align: center;
     background-color: white;
     height:auto;
     display:flex;
-    width: 15%;
+    width: 80%;
     float: left;
     border: 2px solid #CCC;
     border-radius: 10px;
 
     justify-content: center;
-}
-
-.text-exp {
-    margin:5px auto 0px auto;
-    padding-bottom:5px;
-    text-align: left;
-    background-color: white;
-    height: auto;
-    line-height:1.4;
-    width: 83%;
-    float: right;
-    border-bottom: 2px solid #CCC;
 }
 
 .text-exp:last-child {
