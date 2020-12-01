@@ -7,6 +7,10 @@
 }
 
 #main-top{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -40,6 +44,36 @@
     width:480px;
     height:100%;
     float: right;
+}
+
+#usuario {
+  display: flex;
+  align-items: center;
+}
+
+#usuario p, a{
+  color: white;
+}
+
+#info-usuario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#container-foto {
+  margin-left: 5px;
+}
+
+#fotoUsuario img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#msgLogin {
+  color: white;
+  font-size: 14px;
 }
 
 .campo-main label{

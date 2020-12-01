@@ -2,5 +2,10 @@
 session_start();
 
 session_destroy();
-header('location:../pages/login-adm.php');
+
+if ($_SESSION['tipoUsuario'] == 'adm') {
+    header('location:../pages/login-adm.php');
+} else {
+    header('location:../../home.php');
+}
 ?>

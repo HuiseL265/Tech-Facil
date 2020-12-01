@@ -1,4 +1,5 @@
   <?php
+  session_start();
   require("backend/actions/SQL Server/connectsql.php");
   ?>
   
@@ -11,7 +12,7 @@
         </div>
 
         <div class="menu">
-            <form id="form-login" method="post" action="">
+            <form id="form-login" method="post" action="backend/actions/logar.act.php">
                 <div class="campo-main">
                     <label for="emailLogin">Email</label>
                     <input type="email" id="emailLogin" name="email" required="required">
@@ -24,13 +25,28 @@
                 <button>ENTRAR</button>
             </form>
         </div>
+        
+        <div id="usuario">
+            <div id="info-usuario">
+                <p id="nome"><?php echo $_SESSION['Nome'] ?></p>
+                <div class="sair"><a href="backend/actions/sair.php">Sair</a></div>
+            </div>
+            
+            <div id="container-foto">
+                <div id="fotoUsuario">
+                    <img src="https://imagens.ndig.com.br/internet/perfil_sem_foto_facebook.jpg" alt="foto de perfil">
+                </div>
+            </div>
+        </div>
 </header>
     
     <nav id="line-nav">
             <ul>
             <a href="home.php"><li>Home</li></a>            
-            <a href="pedidos.php"><li>Pedidos</li></a>  
+            <a id="pedido" href="pedidos.php"><li>Pedidos</li></a>  
             <a href="sobre.php"><li>Sobre</li></a>  
             <a href="comoFunciona.php"><li style="width:150px;">Como Funciona?</li></a>
             </ul>
     </nav>
+
+    <script src="backend/js/login.js"></script>
