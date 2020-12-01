@@ -269,3 +269,20 @@ h4,
     text-align:center;
 }
 
+.notFound{
+    border:1px solid #bd2727 !important;
+}
+
+.notFoundCEP::before{
+    content: "(Por favor, insira um CEP válido)";
+    color: #ff3a3a;
+    display: block;
+    position: absolute;
+    margin: -30px 0px 0px 120px;
+}
+
+input:disabled{
+    background-color: #cacacac2 !important;
+
+}
+

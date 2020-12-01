@@ -48,10 +48,12 @@
                 <h4>O que é a TechFacil?</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                     out labore et dolore magna aliqua.</p>
+                <a href="sobre.php">
+                    Saiba mais -->
+                </a>
             </div>
         </div>
             
-
         <?php include('rodape.php') ?>
 </body>
 </html>

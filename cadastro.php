@@ -103,6 +103,8 @@
     -->
 
     <?php include("rodape.php") ?>
+
+    <script src="js/cadastro.js"></script>
 </body>
 
 </html>
