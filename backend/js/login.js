@@ -23,7 +23,7 @@ window.onload = function() {
 $(document).ready(function (){
 
     $.ajax({
-       url: '../backend/actions/verificarLogin.php',
+       url: './backend/actions/verificarLogin.php',
        success: function(data) {
           console.log(data);
           if(data == "Logado"){

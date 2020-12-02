@@ -51,7 +51,7 @@
                         <option value="Doutorado">Doutorado</option>
                         <option value="Pós-doutorado">Pós-doutorado</option>
                     </select>
-                    <input style="margin-left:25px;width:70%;" type="text" name="instituicao" id="">
+                    <input style="margin-left:25px;width:70%;" type="text" name="instituicao" id="instituicao-esc">
                 </li>
 
                 <!-- linha 2 -->
@@ -61,12 +61,12 @@
                     <h4 style="margin-left:60px;">Data de conclusão</h4>
                 </li>
                 <li>
-                    <input type="text" name="curso" id="">
+                    <input type="text" name="curso" id="curso-esc">
                     <select name="situacao" id="" style="margin-left:25px;">
                         <option value="Cursando">Cursando</option>
                         <option value="Finalizado">Finalizado</option>
                     </select>
-                    <input type="date" name="conclusaoData" id="" style="margin-left:25px;">
+                    <input type="date" name="conclusaoData" id="conclusaoData-esc" style="margin-left:25px;">
                 </li>
             </ul>
 
@@ -96,7 +96,7 @@
                         <option value="Tecnólogo">Tecnólogo</option>
                         <option value="Tecnólogo">Remoto</option>
                     </select>
-                    <input style="margin-left:25px;width:495px;" type="text" name="instituicao" id="">
+                    <input style="margin-left:25px;width:495px;" type="text" name="instituicao" id="instituicao-cur">
                 </li>
 
                 <!-- linha 2 -->
@@ -106,12 +106,12 @@
                     <h4 style="margin-left:60px;">Código da credencial(se houver)</h4>
                 </li>
                 <li>
-                    <input type="text" name="curso" id="">
+                    <input type="text" name="curso" id="curso">
                     <select name="situacao" id="" style="margin-left:25px;">
                         <option value="Cursando">Cursando</option>
                         <option value="Finalizado">Finalizado</option>
                     </select>
-                    <input type="text" name="conclusaoData" id="" style="margin-left:25px;width:295px;">
+                    <input type="text" name="conclusaoData" id="conclusaoData-cur" style="margin-left:25px;width:295px;">
                 </li>
             </ul>
 
@@ -148,6 +148,75 @@
     
     <!-- Fim da adição do curriculo -->
 
+    <!-- Listagem dos itens do curriculo -->
+
+    <div class="container-curriculo" id="cont-hab-list">
+        <div class="habilidades">
+            <p>Andar de bicicleta</p>
+            <button class="exc-hab">X</button>
+        </div>      
+    </div>
+
+    <div class="container-curriculo" id="cont-esc-list">  
+        <ul class="escolaridades">
+            <li>
+                <h5>Nivel de formação: </h5>
+                <p>Ensino Médio</p>
+            </li>
+            
+            <li>
+                <h5>Instituição: </h5>
+                <p>Oswaldo Aranha Bandeira de Mello</p>
+            </li>
+
+            <li>
+                <h5>Curso: </h5>
+                <p>Ensino Regular</p>
+            </li>
+
+            <li>
+                <h5>Situação: </h5>
+                <p>Finalizado</p>
+            </li>
+
+            <li>
+                <h5>Data de Conclusão: </h5>
+                <p>12/12/2018</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container-curriculo" id="cont-cur-list">  
+        <ul class="cursos">
+            <li>
+                <h5>Nivel de formação: </h5>
+                <p>Tecnólogo</p>
+            </li>
+            
+            <li>
+                <h5>Instituição: </h5>
+                <p>Etec de Cidade Tiradentes</p>
+            </li>
+
+            <li>
+                <h5>Curso: </h5>
+                <p>Técnico em Administração</p>
+            </li>
+
+            <li>
+                <h5>Situação: </h5>
+                <p>Finalizado</p>
+            </li>
+
+            <li>
+                <h5>Data de Conclusão: </h5>
+                <p>12/12/2019</p>
+            </li>
+        </ul>
+    </div>
+    <!-- Fim da listagem dos itens do curriculo -->
+
+    
 
     <script src="js/curriculo.js"></script>
 </body>

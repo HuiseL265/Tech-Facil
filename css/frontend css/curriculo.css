@@ -186,3 +186,95 @@
     box-shadow: seagreen 0px 0px 4px;
     cursor: pointer;
 }
+
+
+
+
+
+
+/* Listagem dos itens do curriculo */
+
+.container-curriculo{
+    width:450px;
+    min-height: 50px;
+    height:auto;
+    padding:5px;
+    margin-top:50px;
+
+    border-top: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+.container-curriculo::before{
+    position: absolute;
+    margin:-25px 0px 0px -5px;
+
+    color:rgb(31, 130, 223);
+    font-weight: 600;
+}
+
+#cont-hab-list::before{
+    content:"Habilidades";
+}
+
+#cont-hab-list p{
+    font-size:14px;
+    display:inline-block;    
+}
+
+.habilidades{
+    width:auto;
+    height:35px;
+    margin:5px;
+    padding-left:10px;
+    border-radius:5px;
+    background-color:#c4c4c4;
+    display:inline-block;
+}
+
+.exc-hab{
+    height:35px;
+    width:25px;
+
+    background-color: #c4c4c4;
+    border:none;
+    border-radius:0px 5px 5px 0px;
+
+    outline:none;
+}
+
+.exc-hab:hover{
+    background-color: #e0e0e0;
+    cursor:pointer;
+}
+
+#cont-esc-list::before{
+    content:"Formação Acadêmica";
+}
+
+.escolaridades li,
+.cursos li{
+    margin-top:5px;
+}
+
+.escolaridades li:last-child::after,
+.cursos li:last-child::after{
+    content:"";
+    display:block;
+    height:1px;
+    width:250px;
+    margin:10px 0px;
+    background-color: #c4c4c4;
+}
+
+.escolaridades li h5,
+.escolaridades li p,
+.cursos li h5,
+.cursos li p{
+    display:inline-block;
+    font-size:13px;
+}
+
+#cont-cur-list::before{
+    content:"Cursos";
+}
