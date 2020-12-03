@@ -68,10 +68,10 @@
                 </div>
                 <div class="campo">
                     <h4>Contato</h4>
-                    <input type="text" id="ddd" name="ddd" placeholder="DDD" style="width: 86px" value="" required="" maxlength="2">
-                    <input type="text" id="telefone" name="telefone" placeholder="Telefone1" style="width: 208px;margin-left:10px;" value="" required="" maxlength="9">
-                    <input type="text" id="ddd2" name="ddd" placeholder="DDD" style="width: 86px;margin-left:30px;" value="" maxlength="2">
-                    <input type="text" id="telefone2" name="telefone" placeholder="Telefone2 (Opcional)" style="width: 208px;margin-left:10px;" value="" maxlength="9">
+                    <input type="text" id="ddd" name="ddd1" placeholder="DDD" style="width: 86px" value="" required="" maxlength="2">
+                    <input type="text" id="telefone" name="telefone1" placeholder="Telefone1" style="width: 208px;margin-left:10px;" value="" required="" maxlength="9">
+                    <input type="text" id="ddd2" name="ddd2" placeholder="DDD" style="width: 86px;margin-left:30px;" value="" maxlength="2">
+                    <input type="text" id="telefone2" name="telefone2" placeholder="Telefone2 (Opcional)" style="width: 208px;margin-left:10px;" value="" maxlength="9">
                 </div>
                 <div class="campo">
                     <h4>Complemento</h4>

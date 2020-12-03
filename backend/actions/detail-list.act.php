@@ -172,7 +172,7 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
                             echo "
                             <li>
                                 <img src='./img/redesSociais icon/email.png' alt='email' srcset=''>
-                                <p>".$email."</p>
+                                <p id='email'> <a href='mailto:".$email." ?subject=Olá,%20sou%20um%20dos%20freelancers%20vindo%20dá%20Techfacil%20e%20tenho%20interesse%20em%20auxiliar%20com%20o%20seu%20problema!'>".$email."</a></p>
                             </li> 
                             ";  
                         }

@@ -300,6 +300,11 @@ body{
     color:#00a316;
 }
 
+#email a{
+    color:#ca0707;
+}
+
+
 #pedido-cont .detail-contato h4::after{
     width:65px;
     height:1.5px;

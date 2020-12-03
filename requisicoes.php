@@ -12,8 +12,11 @@
 </head>
 <body>
 <?php include("main.php");
+
     if (!isset($_SESSION['Nome'])) {
         header('location: home.php');
+    } else if (isset($_SESSION['prestador'])) {
+        header('location: pedidos.php');
     }
 ?>
 

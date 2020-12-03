@@ -47,8 +47,13 @@ if ($senha === $confsenha) {
     sqlsrv_query($con, "INSERT INTO Tb_Endereco (idUsuario, Rua,Cidade,Bairro,CEP,UF,Numero,Complemento)
     VALUES('$usuario[idUsuario]', '$rua','$cidade','$bairro','$cep','$uf','$num','$complemento')");
 
+    $telefone1 = $ddd1.$telefone1;
+    $telefone2 = $ddd2.$telefone2;
    
+    sqlsrv_query($con, "INSERT INTO Tb_Contato (idUsuario, telefone1, telefone2) VALUES('$usuario[idUsuario]', '$telefone1', '$telefone2')");
     }
+
+    header('location:../../home.php');
 }
 
 ?>

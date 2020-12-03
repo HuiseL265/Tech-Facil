@@ -12,7 +12,7 @@
         echo $tipoUsuario[0];
 
         } else if ($tipoUsuario[0] == 'Prestador') {
-            $_SESSION['presttador'] = $tipoUsuario[0];
+            $_SESSION['prestador'] = $tipoUsuario[0];
         echo $tipoUsuario[0];
 
         } else {
