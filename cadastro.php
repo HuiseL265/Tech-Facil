@@ -1,8 +1,7 @@
 <?php
-    session_start();
     extract($_POST);
 
-    if ($name == "" || $name == null) {
+    if ($nome == "" || $nome == null) {
         header('location: home.php');
     }
 ?>
