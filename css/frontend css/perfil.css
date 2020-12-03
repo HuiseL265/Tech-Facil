@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #EBF2F5;
+}
+
+#perfil {
+    display: flex;
+    min-height: 100vh;
+}
+
+aside.menu-lateral {
+    position: fixed;
+    height: 100%;
+    background: #15C3D6;
+    padding: 10px;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+aside.menu-lateral footer button {
+    width: 48px;
+    height: 48px;
+    border:none;
+    background: #12AFCD;
+    border-radius:1.6rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-nome {
+    text-align: center;
+}
+
+.foto-perfil img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main {
+    flex: 1;
+}
+
+.conteudo {
+    padding-left: 175px;   
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    background: green;
+}

@@ -1,0 +1,518 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 247, 238);
+}
+
+#container-req{
+    display:flex;
+    
+    width:600px;
+    height:500px;
+    padding:10px;
+
+    gap:1%;
+
+    margin:120px auto 0px auto;
+
+    border:1px  solid rgb(61, 61, 61);
+    border-radius: 10px;
+
+    background: rgb(16,67,126);
+    background: linear-gradient(90deg, rgba(16,67,126,1) 0%, rgba(33,80,182,1) 40%, rgba(0,143,209,1) 100%);
+}
+
+#container-req > div{
+    border: 1px solid #000;
+    padding:10px;
+
+    background-color:white;
+}
+
+#container-req > div h3{
+    font-size: 20px;
+    color:rgb(43, 104, 173);
+}
+
+#container-req > div h3::after,
+#container-req > div h5::after{
+    display:block;
+    content:"";
+    width:80%;
+    height:1px;
+    background-color:rgb(59, 59, 59);
+    color:rgb(59, 59, 59);
+    box-shadow:-1px 0px 1px #000;
+
+    margin-bottom:10px;
+}
+
+#cont-filtro{
+    width:220px;
+    border-radius:10px 0px 0px 10px;
+}
+
+#cont-lista{
+    width:400px;
+    overflow:scroll;
+}
+
+/* #cont-info{
+    width:600px;
+    border-radius:0px 10px 10px 0px;
+} */
+
+
+/* lista */
+
+.container {
+    width:100%;
+}
+
+.lista-pedidos{
+    display: inline-flex;
+    flex-direction: column-reverse;
+}
+
+.lista-conteudo{
+    display: flex;
+    width:100%;
+    height:110px;
+    padding:10px;
+
+    margin-bottom:20px;
+
+    border-radius:2px;
+    border:1px solid #000;
+    box-shadow:0;
+
+    overflow: hidden;
+    
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    color:rgb(58, 58, 58);
+}
+
+.info-titulos {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.lista-conteudo:hover{
+    border:1px solid rgb(51, 92, 168);
+    box-shadow: 0px 0px 5px rgb(67, 133, 255) inset;
+    cursor:pointer;
+
+    color: rgb(67, 133, 255);
+}
+
+.lista-conteudo > h5{
+    display:inline;
+    font-size:15px;
+}
+
+.lista-conteudo  > .lista-status{
+    letter-spacing: 0.3px;
+    color:rgb(58, 58, 58);
+    float:right;
+}
+
+.status-red{ color:rgb(187, 59, 59) !important; }
+.status-green{ color:rgb(70, 187, 59) !important; }
+
+.lista-conteudo > .lista-desc{
+    width:100%;
+    height:50px;
+    font-size:12px;
+    color:rgb(70, 70, 70);
+    overflow: hidden;
+}
+
+.lista-conteudo > .lista-desc::before{
+    width:30%;
+    color:rgb(105, 105, 105);
+}
+
+.Manipulacao {
+    display: flex;
+    flex-direction: column;
+}
+
+.Manipulacao a img {
+    width: 20px;
+    height: 20px;
+}
+
+.lista-desc {
+    text-align: justify;
+    padding-right: 5px;
+}
+
+/* filtros */
+
+#cont-filtro h5{
+    margin:20px 0px 5px 0px;
+}
+
+.radio-buttons{
+    font-size:14px;
+    margin-bottom:10px;
+
+    letter-spacing: 0.3px;
+}
+
+.radio-buttons label{
+    margin-bottom:5px;
+}
+
+#busca-txt{
+    width:80%;
+    height:25px;
+    border:1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    padding:0px 5px;
+
+    outline:none;
+}
+
+#btnBuscar{
+    width:30px;
+    height:25px;
+    margin-bottom: -10px;
+    margin-left: -5px;
+    position: absolute;
+
+    border-radius:0px 5px 5px 0px;
+
+    background-image: url("../../img/icon/smallLupa.png");
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+
+    border:1px solid rgb(100, 100, 100);
+
+    outline:none;
+}
+
+    #btnBuscar:hover{
+        background-color: rgb(202, 221, 238);
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* detail info */
+.popExpandir {
+    justify-content: center;
+    display: none;
+    align-items: center;
+    width: 100%;
+
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0,0.5);
+}
+
+.expandir {
+    width: 40%;
+    background-color: gainsboro;
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(73, 73, 73);
+}
+
+.expandir li{
+    list-style: none;
+}
+
+/* Popup nova requisicao */
+
+.contPopInfo {
+    justify-content: center;
+    display: none;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0,0.5);
+}
+
+#cont-info{
+    display:block;
+    padding-right:5px;
+
+    border-radius:0px 5px 5px 0px;
+
+    overflow-y:scroll;
+}
+
+#cont-info > div{
+    margin-bottom:20px;
+}
+
+#topo-cont{
+    display: flex;
+    justify-content: space-between;
+    width:auto;
+    height:auto;
+
+    margin:-10px 0px 0px -10px;
+    
+    font-size:12px;
+}
+
+#topo-cont > #nome-cont{
+    color:white;
+    
+    display:inline-block;
+    width:auto;
+    height:auto;
+    background-color:#119e40;
+    padding:10px 20px 10px 10px;
+
+    border-radius:0px 2px 50px 0px;
+}
+
+#topo-cont > #nome-cont h4{
+    font-size:18px;
+}
+
+.fechar a {
+    color: black;
+    font-size: 20px;
+}
+
+#pedido-cont{
+    width:100%;
+    height:auto;
+}
+
+#info-pedido{
+    margin-bottom:30px;
+}
+
+#info-pedido li{
+    margin:5px 0px;
+}
+
+#info-pedido h5{
+    color:#155fcf;
+}
+
+#pedido-cont > #info-pedido h5,
+#pedido-cont > #info-pedido p{
+    display:inline-block;
+    font-size:14px;
+}
+
+#pedido-cont h4{
+    color:#155fcf;
+}
+
+#pedido-cont h4::after{
+    display:flex;
+    content:"";
+    width:80px;
+    height:1.8px;
+
+    background-color:#155fcf;
+
+    margin:2px 0px 5px 1px;
+}
+
+#pedido-cont #descricao-pedido{
+    width:100%;
+    height:auto;
+    text-align:left;
+    padding-right:12px;
+
+    font-size:14px;
+    letter-spacing: 0.2px;
+    word-spacing: 3px;
+    line-height: 18px;
+}
+
+
+
+/* #cont-info{
+    display:block;
+    padding-right:5px;
+
+    border-radius:0px 5px 5px 0px;
+
+    overflow-y:scroll;
+}
+
+#cont-info > div{
+    margin-bottom:20px;
+}
+
+#topo-cont{
+    width:100%;
+    height:auto;
+
+    margin:-10px 0px 0px -10px;
+    
+    font-size:12px;
+}
+
+#topo-cont > #nome-cont{
+    color:white;
+    
+    display:inline-block;
+    width:auto;
+    height:auto;
+    background-color:#119e40;
+    padding:10px 20px 10px 10px;
+
+    border-radius:0px 2px 50px 0px;
+}
+
+#topo-cont > #nome-cont h4{
+    font-size:18px;
+}
+
+#pedido-cont{
+    width:100%;
+    height:auto;
+}
+
+#info-pedido{
+    margin-bottom:30px;
+}
+
+#info-pedido li{
+    margin:5px 0px;
+}
+
+#info-pedido h5{
+    color:#155fcf;
+}
+
+#pedido-cont > #info-pedido h5,
+#pedido-cont > #info-pedido p{
+    display:inline-block;
+    font-size:14px;
+}
+
+#pedido-cont h4{
+    color:#155fcf;
+}
+
+#pedido-cont h4::after{
+    display:flex;
+    content:"";
+    width:80px;
+    height:1.8px;
+
+    background-color:#155fcf;
+
+    margin:2px 0px 5px 1px;
+}
+
+#pedido-cont #descricao-pedido{
+    width:100%;
+    height:auto;
+    background-color: rgb(255, 255, 255);
+    text-align:left;
+    padding-right:12px;
+
+    font-size:14px;
+    letter-spacing: 0.2px;
+    word-spacing: 3px;
+    line-height: 18px;
+}
+
+
+.detail-contato{
+    margin:20px 0px 0px 0px;
+}
+
+.detail-contato ul li{
+    display:flex;
+    align-items: center;
+
+    margin-top:5px;
+}
+
+.detail-contato h4,
+.detail-contato p{
+    font-size:14px;
+}
+
+.detail-contato ul li p{
+    display:inline-block;
+    margin-left:5px;
+}
+
+.detail-contato ul li p a{
+    color:#00a316;
+}
+
+#pedido-cont .detail-contato h4::after{
+    width:65px;
+    height:1.5px;
+}
+
+.detail-contato img{
+    width:20px;
+    height:20px;
+} */
+
+
+
+
+
+
+
+
+
+
+/*scroll do detail-info e list*/
+
+
+#cont-info::-webkit-scrollbar,#cont-lista::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  #cont-info::-webkit-scrollbar:hover,#cont-lista::-webkit-scrollbar:hover {
+    width: 10px !important;
+  }
+  #cont-info::-webkit-scrollbar-thumb,#cont-lista::-webkit-scrollbar-thumb {
+    background: #00bd19;
+  }
+  #cont-info::-webkit-scrollbar-thumb:hover,#cont-lista::-webkit-scrollbar-thumb:hover {
+    background: #18b132;
+  }
+  #cont-info::-webkit-scrollbar-thumb:active,#cont-lista::-webkit-scrollbar-thumb:active {
+    background: #0dd42e;
+  }
+  #cont-info::-webkit-scrollbar-track,#cont-lista::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  #cont-info::-webkit-scrollbar-track:hover,#cont-lista::-webkit-scrollbar-track:hover {
+    background: #e6e6e6;
+  }
+  #cont-info::-webkit-scrollbar-track:active,#cont-lista::-webkit-scrollbar-track:active {
+    background: #cacaca;
+  }
+  #cont-info::-webkit-scrollbar-corner,#cont-lista::-webkit-scrollbar-corner {
+    background: transparent;
+  }

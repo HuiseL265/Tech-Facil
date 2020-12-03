@@ -1,9 +1,18 @@
 function abrir(){
-    document.getElementById('PopInfo').style.display ='block';
-    document.getElementById('Manipular').style.display ='none';
+        document.getElementById('contPopInfo').style.display ='block';
+        document.getElementById('Manipular').style.display ='none';  
 }
-function fechar(){
-    document.getElementById('PopInfo').style.display ='none';
+function fechar(popup){
+    switch(popup) {
+        case 1:
+           document.getElementById('contPopInfo').style.display ='none';
+        break;
+        
+        case 2:
+            document.getElementById('popExpandir').style.display ='none';
+        break;
+    }
+    
 }
 function confirmExclusao(){
     document.getElementById('Manipular').style.display ='block';
@@ -35,3 +44,20 @@ $(document).ready(function(){
         }
     });
 });
+
+function expandir(idRequisicao){
+    $.ajax({
+        type: "get",
+        url: "./backend/actions/detail-list.act.php?idRequisicao=" + idRequisicao,
+        success: function(response) {
+            $('.expandir').html(response);
+            var collection = $(".detail-status");
+            CorStatus(collection);
+            document.getElementById('popExpandir').style.display ='flex';
+
+        },
+        error: function(){
+            alert("ocorreu um erro, chama o professor.")
+        }
+    });
+}

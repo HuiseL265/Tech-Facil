@@ -1,5 +1,6 @@
 <?php
 require("SQL Server/connectsql.php");
+session_start();
 
 /* criação das variaveis */
 $txt = $_GET['texto'];
@@ -31,6 +32,8 @@ if($txt == null or $txt == ""){
 
 $params = array();
 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+$tipoUser = sqlsrv_query($con, "SELECT tipoUsuario FROM Tb_Usuario WHERE Email = '$_SESSION[Email]'", $params, $options);
+$tipoUser = sqlsrv_fetch_array($tipoUser);
 
 if(!$lista = sqlsrv_query($con, "SELECT * FROM vwRequisicao 
 $wlikeStatus $wlikeContexto $wlikeProblem", $params, $options)){
@@ -38,11 +41,27 @@ $wlikeStatus $wlikeContexto $wlikeProblem", $params, $options)){
 }else{
     if(sqlsrv_num_rows($lista) >= 1 or sqlsrv_num_rows($lista) != false){
         while ($conteudo = sqlsrv_fetch_array($lista, SQLSRV_FETCH_ASSOC)){
-            echo "<div class='lista-conteudo' onclick=detalhar(". $conteudo['idRequisicao'] .")>";
-            echo "<h5>".utf8_encode($conteudo['Tipo_Problema'])."</h5>";
-            echo "<p class='lista-status'>".trim(utf8_encode($conteudo['Status']))."</p>";
-            echo "<p class='lista-desc'>".utf8_encode($conteudo['Contexto'])."</p>";
-            echo "</div>";
+            if ($tipoUser[0] == "Contratante"){
+                echo "<div class='lista-conteudo' >";
+                echo "<div class='container' onclick='expandir(". $conteudo['idRequisicao'] .")'>";
+                echo "<div class= 'info-titulos'>";
+                echo "<h5>".utf8_encode($conteudo['Tipo_Problema'])."</h5>";
+                echo "<p class='lista-status'>".utf8_encode($conteudo['Status'])."</p>";
+                echo "</div>";
+                echo "<p class='lista-desc'>".utf8_encode($conteudo['Contexto'])."</p>";
+                echo "</div>";
+                echo "<div class='Manipulacao'>";
+                echo "<a href='javascript: confirmExclusao()'><img src='img/icon/excluir.png'></a>";
+                echo "<a href=''><img src='img/icon/editar.png'></a>";
+                echo "</div>";
+                echo "</div>";
+            } else {
+                echo "<div class='lista-conteudo' onclick=detalhar(". $conteudo['idRequisicao'] .")>";
+                echo "<h5>".utf8_encode($conteudo['Tipo_Problema'])."</h5>";
+                echo "<p class='lista-status'>".trim(utf8_encode($conteudo['Status']))."</p>";
+                echo "<p class='lista-desc'>".utf8_encode($conteudo['Contexto'])."</p>";
+                echo "</div>";
+            }            
         }
     }else{
         echo "<p style=font-size:12px>*Nenhum pedido encontrado</p>";
