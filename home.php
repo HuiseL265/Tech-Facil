@@ -14,21 +14,23 @@
     <?php include('main.php') ?>
  
         <div id="cont-topo">
+            <?php if(!isset($_SESSION['Email'])){ ?>
 
-            <div id="cont-cadastro">
+                <div id="cont-cadastro">
 
-                <form action="cadastro.php" method="post">
-                    <ul>
-                        <li><p>Cadastrar-se</p></li>
-                        <li><input type="text" id="nome" name="nome" required="required" placeholder="Nome Completo"></li>
-                        <li><input type="email" id="email" name="email" required="required" placeholder="Email"></li>
-                        <li><input type="password" name="senha"  id="senha" required="required" placeholder="Senha"></li>
-                        <li><input type="password" name="senha2" id="senha2" required="required" placeholder="Confirmar Senha"></li>
-                        <li><button type="submit" id="confirm">cadastrar</button></li>
-                    </ul>       
-                </form>
+                    <form action="cadastro.php" method="post">
+                        <ul>
+                            <li><p>Cadastrar-se</p></li>
+                            <li><input type="text" id="nome" name="nome" required="required" placeholder="Nome Completo"></li>
+                            <li><input type="email" id="email" name="email" required="required" placeholder="Email"></li>
+                            <li><input type="password" name="senha"  id="senha" required="required" placeholder="Senha"></li>
+                            <li><input type="password" name="senha2" id="senha2" required="required" placeholder="Confirmar Senha"></li>
+                            <li><button type="submit" id="confirm">cadastrar</button></li>
+                        </ul>       
+                    </form>
 
-            </div>          
+                </div>          
+            <?php } ?>
         </div>
 
         <div id="avalUsers-cont">

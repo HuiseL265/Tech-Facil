@@ -11,6 +11,9 @@
             </a>
         </div>
 
+        <?php if(!isset($_SESSION['Email'])){
+
+        ?>
         <div class="menu">
             <form id="form-login" method="post" action="backend/actions/logar.act.php">
                 <div class="campo-main">
@@ -25,6 +28,7 @@
                 <button>ENTRAR</button>
             </form>
         </div>
+        <?php } else { ?>
         
         <div id="usuario">
             <div id="info-usuario">
@@ -38,6 +42,7 @@
                 </div>
             </div>
         </div>
+        <?php } ?>
 </header>
     
     <nav id="line-nav">

@@ -1,6 +1,10 @@
 <?php
     session_start();
     extract($_POST);
+
+    if ($name == "" || $name == null) {
+        header('location: home.php');
+    }
 ?>
 
 <!DOCTYPE html>

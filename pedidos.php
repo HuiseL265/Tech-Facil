@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="css/frontend css/rodape.css">
 </head>
 <body>
-<?php include("main.php");
+<?php 
+    include("main.php");
+    
     if (!isset($_SESSION['Nome'])) {
         header('location: home.php');
+    } else if (isset($_SESSION['contratante'])) {
+        header('location: requisicoes.php');
     }
 ?>
 
