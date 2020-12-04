@@ -1,7 +1,7 @@
 <?php
 
 $serverName = "SQL5097.site4now.net";
-$connectionInfo = array( "Database"=>"DB_A69E92_dbTechFacil", "UID"=>"DB_A69E92_dbTechFacil_admin", "PWD"=>"Techfacil520");
+$connectionInfo = array( "Database"=>"DB_A69E92_dbTechFacil", "UID"=>"DB_A69E92_dbTechFacil_admin", "PWD"=>"Techfacil520","CharacterSet" => "UTF-8");
 
 $con = sqlsrv_connect( $serverName, $connectionInfo);
 

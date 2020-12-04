@@ -32,14 +32,17 @@
         
         <div id="usuario">
             <div id="info-usuario">
-                <p id="nome"><?php echo $_SESSION['Nome'] ?></p>
+                <p id="nome"><a href="perfil.php"><?php echo $_SESSION['Nome'] ?></a></p>
                 <div class="sair"><a href="backend/actions/sair.php">Sair</a></div>
+                <p id="userid" style="display:none;"><?php echo $_SESSION['id'] ?></p>
             </div>
             
             <div id="container-foto">
+                <a href="perfil.php">
                 <div id="fotoUsuario">
-                    <img src="https://imagens.ndig.com.br/internet/perfil_sem_foto_facebook.jpg" alt="foto de perfil">
+                    <img src="img/perfil/profilepic.png" alt="foto de perfil">
                 </div>
+                </a>
             </div>
         </div>
         <?php } ?>

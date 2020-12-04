@@ -45,10 +45,10 @@ $wlikeStatus $wlikeContexto $wlikeProblem", $params, $options)){
                 echo "<div class='lista-conteudo' >";
                 echo "<div class='container' onclick='expandir(". $conteudo['idRequisicao'] .")'>";
                 echo "<div class= 'info-titulos'>";
-                echo "<h5>".utf8_encode($conteudo['Tipo_Problema'])."</h5>";
-                echo "<p class='lista-status'>".utf8_encode($conteudo['Status'])."</p>";
+                echo "<h5>".$conteudo['Tipo_Problema']."</h5>";
+                echo "<p class='lista-status'>".$conteudo['Status']."</p>";
                 echo "</div>";
-                echo "<p class='lista-desc'>".utf8_encode($conteudo['Contexto'])."</p>";
+                echo "<p class='lista-desc'>".$conteudo['Contexto']."</p>";
                 echo "</div>";
                 echo "<div class='Manipulacao'>";
                 echo "<a href='javascript: confirmExclusao()'><img src='img/icon/excluir.png'></a>";
@@ -57,9 +57,9 @@ $wlikeStatus $wlikeContexto $wlikeProblem", $params, $options)){
                 echo "</div>";
             } else {
                 echo "<div class='lista-conteudo' onclick=detalhar(". $conteudo['idRequisicao'] .")>";
-                echo "<h5>".utf8_encode($conteudo['Tipo_Problema'])."</h5>";
-                echo "<p class='lista-status'>".trim(utf8_encode($conteudo['Status']))."</p>";
-                echo "<p class='lista-desc'>".utf8_encode($conteudo['Contexto'])."</p>";
+                echo "<h5>".$conteudo['Tipo_Problema']."</h5>";
+                echo "<p class='lista-status'>".trim($conteudo['Status'])."</p>";
+                echo "<p class='lista-desc'>".$conteudo['Contexto']."</p>";
                 echo "</div>";
             }            
         }

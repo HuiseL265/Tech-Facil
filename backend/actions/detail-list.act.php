@@ -26,8 +26,8 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
                 echo"
                 <div id='topo-cont'>
                     <div id='nome-cont'>
-                        <h4>".utf8_encode($conteudo['Tipo_Problema'])."</h4>
-                        <p>".utf8_encode($conteudo['Status'])."</p>
+                        <h4>".$conteudo['Tipo_Problema']."</h4>
+                        <p>".$conteudo['Status']."</p>
                     </div>
                     
                     <div class='fechar'>
@@ -41,19 +41,19 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
                     <ul id='info-pedido'>
                         <li>
                             <h5>Contratante: </h5>
-                            <p>".utf8_encode($conteudo['Nome'])."</p>
+                            <p>".$conteudo['Nome']."</p>
                         </li>
                         <li>
                             <h5>Tipo do Pedido: </h5>
-                            <p>".utf8_encode($conteudo['Tipo_Problema'])."</p>
+                            <p>".$conteudo['Tipo_Problema']."</p>
                         </li>
                         <li>
                             <h5>Situação: </h5>
-                            <p class='detail-status'>".utf8_encode($conteudo['Status'])."</p>
+                            <p class='detail-status'>".$conteudo['Status']."</p>
                         </li>
 
                 <h4>Descrição</h4>
-                <div id='descricao-pedido'>".utf8_encode($conteudo['Contexto'])."</div>";
+                <div id='descricao-pedido'>".$conteudo['Contexto']."</div>";
         } else {
             $conteudo = sqlsrv_fetch_array($query, SQLSRV_FETCH_ASSOC);
 
@@ -68,8 +68,8 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
                 echo"
                 <div id='topo-cont'>
                     <div id='nome-cont'>
-                        <h4>".utf8_encode($conteudo['Tipo_Problema'])."</h4>
-                        <p>".utf8_encode($conteudo['Status'])."</p>
+                        <h4>".$conteudo['Tipo_Problema']."</h4>
+                        <p>".$conteudo['Status']."</p>
                     </div>               
                 </div>
 
@@ -77,15 +77,15 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
                     <ul id='info-pedido'>
                         <li>
                             <h5>Contratante: </h5>
-                            <p>".utf8_encode($conteudo['Nome'])."</p>
+                            <p>".$conteudo['Nome']."</p>
                         </li>
                         <li>
                             <h5>Tipo do Pedido: </h5>
-                            <p>".utf8_encode($conteudo['Tipo_Problema'])."</p>
+                            <p>".$conteudo['Tipo_Problema']."</p>
                         </li>
                         <li>
                             <h5>Situação: </h5>
-                            <p class='detail-status'>".utf8_encode($conteudo['Status'])."</p>
+                            <p class='detail-status'>".$conteudo['Status']."</p>
                         </li>
                         <li style=margin-top:20px;>
                             <h5>Orçamento: </h5>
@@ -97,7 +97,7 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
                         </li>
                     </ul>
                     <h4>Descrição</h4>
-                    <div id='descricao-pedido'>".utf8_encode($conteudo['Contexto'])."</div>
+                    <div id='descricao-pedido'>".$conteudo['Contexto']."</div>
 
                     <div class='detail-contato'>
                         <h4>Contatos</h4>
@@ -193,8 +193,8 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
                         echo "
                             <li>
                                 <img src='./img/icon/location.png' alt='localização'>
-                                <p>". utf8_encode($conteudo['Rua'].", ".$conteudo['Numero']." - ".$conteudo['Bairro'].", "
-                                .$conteudo['Cidade']." - ".$conteudo['UF'].", ".$conteudo['CEP'])."</p>
+                                <p>". $conteudo['Rua'].", ".$conteudo['Numero']." - ".$conteudo['Bairro'].", "
+                                .$conteudo['Cidade']." - ".$conteudo['UF'].", ".$conteudo['CEP']."</p>
                             </li> 
                         </ul>
                         </div>";

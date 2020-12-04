@@ -5,6 +5,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#curriculos-add-cont{
+    margin-top:100px;
+}
+
 
 #curriculos-add-cont li{
     list-style: none;
@@ -32,7 +36,10 @@
 
 #cont-hab{display:none;}
 
+#cont-exp{display:none;}
+
 .container-popup{
+    z-index: 10;
     display:none;
     background-color: rgba(0, 0, 0,0.5);
     
@@ -138,7 +145,8 @@
 }
 
 .conteudos-formacao li input,
-.conteudos-formacao li select{
+.conteudos-formacao li select,
+.conteudos-formacao li textarea{
     height: 40px;
     padding:5px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -201,7 +209,7 @@
     padding:5px;
     margin-top:50px;
 
-    border-top: 1px solid #c4c4c4;
+    border-top: 2px solid #0e69b3;
     border-radius: 5px;
 }
 
@@ -253,28 +261,50 @@
 }
 
 .escolaridades li,
-.cursos li{
+.cursos li,
+.experiencias li{
     margin-top:5px;
 }
 
 .escolaridades li:last-child::after,
-.cursos li:last-child::after{
+.cursos li:last-child::after,
+.experiencias li:last-child::after{
     content:"";
     display:block;
     height:1px;
     width:250px;
     margin:10px 0px;
-    background-color: #c4c4c4;
+    background-color: #0e69b3;
 }
 
 .escolaridades li h5,
 .escolaridades li p,
 .cursos li h5,
-.cursos li p{
+.cursos li p,
+.experiencias li h5,
+.experiencias li p{
     display:inline-block;
     font-size:13px;
 }
 
 #cont-cur-list::before{
     content:"Cursos";
+}
+
+.conteudos-formacao textarea{
+    resize: none;
+    overflow-y: auto;
+
+    width:100%;
+    height:250px !important;
+    
+}
+
+.conteudos-formacao li input:disabled,
+.conteudos-formacao li input:disabled:hover{
+    background-color: #adadad !important;
+}
+
+#cont-exp-list::before{
+    content:"Experiências";
 }

@@ -51,8 +51,14 @@
   align-items: center;
 }
 
+#usuario p:hover{
+  text-shadow:0px 0px 1.5px white;
+}
+
 #usuario p, a{
   color: white;
+  text-decoration: none;
+  -webkit-user-select: none;
 }
 
 #info-usuario {
@@ -65,10 +71,16 @@
   margin-left: 5px;
 }
 
-#fotoUsuario img {
+#fotoUsuario{
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  overflow:hidden;
+
+}
+
+#fotoUsuario img {
+  width: 50px;
 }
 
 #msgLogin {
@@ -135,7 +147,7 @@
 }
 
 #line-nav ul{
-    width:500px;
+    width:fit-content;
     height:100%;
     margin:0 auto;
     padding:0px;
