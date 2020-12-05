@@ -43,10 +43,18 @@ while($escolaridade = sqlsrv_fetch_array($queryEsc,SQLSRV_FETCH_ASSOC)){
                     $conclusaoData = '---';
                 }else{
                     $conclusaoData = date_format($escolaridade['conclusaoData'],"d/m/Y");
-                }
+                } 
+
+                $escolaridade['Instituicao'] = str_replace(" ","_",$escolaridade['Instituicao']);
+                $escolaridade['Curso'] = str_replace(" ","_",$escolaridade['Curso']);
 
                 echo 
                     $conclusaoData."</p>
+            </li>
+            <li>
+                <button class='exc-Curriculo' onclick=excEsc(".$escolaridade['idCurriculo'].",`".$escolaridade['Instituicao']."`,`".$escolaridade['Curso']."`)> 
+                    Excluir
+                </button>
             </li>
         </ul>
         ";

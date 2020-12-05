@@ -48,8 +48,7 @@
 
             <div id="sobre-content">
                 <h4>O que é a TechFacil?</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                    out labore et dolore magna aliqua.</p>
+                <p>Com o propósito de conectar pessoas, TechFacil.</p>
                 <a href="sobre.php">
                     Saiba mais -->
                 </a>

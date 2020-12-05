@@ -171,6 +171,7 @@ body{
     background-image: url('../../img/sobre-home-wallpaper.jpg');
     background-size: 100%;
     background-position-y: -80px;
+    background-repeat: no-repeat;
 }
 
 #sobre-content{

@@ -1,8 +1,7 @@
     <div class="Fundo">
         <div id="Informacoes-rodape">
             <h1>Quem somos?</h1>
-            <p>Texto aleatorio Texto aleatorio Texto aleatorio Texto aleatorio Texto aleatorio Texto aleatorio Texto aleatorio
-                Texto aleatorio Texto aleatorio Texto aleatorio Texto aleatorio
+            <p>Com o objetivo de facilitar a procura desse tipo de serviço e fornecendo segurança para o Freelancer e para o consumidor.
             </p>
         </div>
         <div id="RedesSociais-rodape">

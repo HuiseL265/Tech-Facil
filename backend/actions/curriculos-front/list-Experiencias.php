@@ -38,7 +38,7 @@ while($experiencias = sqlsrv_fetch_array($queryExp,SQLSRV_FETCH_ASSOC)){
                     $dataEntrada = date_format($experiencias['dataEntrada'],"d/m/Y");
                 }
 
-                if($experiencias['dataSaida'] == NULL or strtotime(date_format($escolaridade['conclusaoData'],"Y-m-d")) < strtotime('1960-01-01')){ 
+                if($experiencias['dataSaida'] == NULL or strtotime(date_format($experiencias['dataSaida'],"Y-m-d")) < strtotime('1960-01-01')){ 
                     $dataSaida = '---';
                 }else{
                     $dataSaida = date_format($experiencias['dataSaida'],"d/m/Y");
@@ -53,6 +53,17 @@ while($experiencias = sqlsrv_fetch_array($queryExp,SQLSRV_FETCH_ASSOC)){
             <li>
                 <h5>Data da saída: </h5>
                 <p>".$dataSaida."</p>
+            </li>";
+
+            $experiencias['nomeEmpresa'] = str_replace(" ","_",$experiencias['nomeEmpresa']);
+            $experiencias['funcao'] = str_replace(" ","_",$experiencias['funcao']);
+
+            echo "
+
+            <li>
+                <button class='exc-Curriculo' onclick=excExp(".$experiencias['idCurriculo'].",`".$experiencias['nomeEmpresa']."`,`".$experiencias['funcao']."`)> 
+                    Excluir
+                </button>
             </li>
         </ul>
         ";
