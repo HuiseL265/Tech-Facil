@@ -10,6 +10,9 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
 $tipoUser = sqlsrv_query($con, "SELECT tipoUsuario FROM Tb_Usuario WHERE Email = '$_SESSION[Email]'", $params, $options);
 $tipoUser = sqlsrv_fetch_array($tipoUser);
 
+$req = sqlsrv_query($con, "SELECT * FROM Tb_RequisicaoProblema WHERE idRequisicao = $idRequisicao", $params, $options);
+$req = sqlsrv_fetch_array($req);
+
 if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = $idRequisicao", $params, $options)){
     if(sqlsrv_num_rows($query) === 1){
         if ($tipoUser[0] == "Contratante"){
@@ -20,10 +23,31 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
             $tel1 = $conteudo['Telefone1'];
             $tel2 = $conteudo['Telefone2'];
             $email = $conteudo['Email'];
+
+            if ($req['tipoProblema'] == "Problema com Hardware"){
+                $req['tipoProblema'] = 1;
+            } else if ($req['tipoProblema'] == "Problema com Software"){
+                $req['tipoProblema'] = 2;
+            } else {
+                $req['tipoProblema'] = 3;
+            }
+            
+            ?><script>
+            var detalhes = { 
+                tipoProblema: String("<?php echo $req['tipoProblema'] ?>"),
+                minOrcamento: String("<?php echo substr($conteudo['minOrcamento'],0,-2) ?>"),
+                maxOrcamento: String("<?php echo substr($conteudo['maxOrcamento'],0,-2) ?>"),
+                formaTrabalho: String("<?php echo $conteudo['formaTrabalho'] ?>"),
+                descricao: String("<?php echo $conteudo['Contexto'] ?>")
+            }
+            
+            editar("<?php echo $idRequisicao ?>", detalhes) </script>
             
             
-            
+            <?php
                 echo"
+
+                
                 <div id='topo-cont'>
                     <div id='nome-cont'>
                         <h4>".$conteudo['Tipo_Problema']."</h4>
@@ -66,6 +90,7 @@ if($query = sqlsrv_query($con, "SELECT * FROM vwRequisicao WHERE idRequisicao = 
             
             
                 echo"
+
                 <div id='topo-cont'>
                     <div id='nome-cont'>
                         <h4>".$conteudo['Tipo_Problema']."</h4>

@@ -19,7 +19,7 @@
 
         case 3:
             $TituloOp = $CampoOutros;
-            break;
+        break;
     }
 
         if ($descricao != '' && $descricao != NULL) {

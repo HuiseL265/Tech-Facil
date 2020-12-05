@@ -96,7 +96,7 @@
                     </li>
                     <li>
                         <h3>Forma de trabalho: </h3> 
-                            <select name="Trabalho">
+                            <select name="Trabalho" id="tipoTrabalho">
                                 <option value="Pessoalmente">Pessoalmente</option>
                                 <option value="Remotamente">Remotamente</option>
                             </select>  

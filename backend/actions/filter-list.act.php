@@ -52,7 +52,7 @@ $wlikeStatus $wlikeContexto $wlikeProblem", $params, $options)){
                 echo "</div>";
                 echo "<div class='Manipulacao'>";
                 echo "<a href='javascript: confirmExclusao()'><img src='img/icon/excluir.png'></a>";
-                echo "<a href=''><img src='img/icon/editar.png'></a>";
+                echo "<a href='javascript: editar(".$conteudo['idRequisicao'].")'><img src='img/icon/editar.png'></a>";
                 echo "</div>";
                 echo "</div>";
             } else {

@@ -72,6 +72,7 @@ body{
 }
 
 .lista-pedidos{
+    width: 100%;
     display: inline-flex;
     flex-direction: column-reverse;
 }
@@ -252,6 +253,10 @@ body{
     top: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0,0.5);
+}
+
+.popInfo {
+    
 }
 
 #cont-info{
