@@ -15,8 +15,12 @@ if(!sqlsrv_num_rows($queryHab) >= 1){
     while($habs = sqlsrv_fetch_array($queryHab,SQLSRV_FETCH_ASSOC)){
         echo "
             <div class='habilidades'>
-                <p>".utf8_encode($habs['habilidade'])."</p>
-                <button class='exc-hab' onclick=excHab(".$habs['idCurriculo'].")>X</button>
+                <p>".$habs['habilidade']."</p>";
+
+                $habs['habilidade'] = str_replace(" ","_",$habs['habilidade']);
+
+                echo "
+                <button class='exc-hab' onclick=excHab(".$habs['idCurriculo'].",'". $habs['habilidade']."')>X</button>
             </div>
             ";
     }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -99,7 +99,7 @@
                 </li>
 
                 <li>
-                    <select name="tipoFormacao" id="" style="width:130px;">
+                    <select name="tipoFormacao-cur" id="tipoFormacao-cur" style="width:130px;">
                         <option value="Presencial">Presencial</option>
                         <option value="Semipresencial">Semipresencial</option>
                         <option value="À distancia">À distancia</option>
@@ -110,11 +110,13 @@
                 <!-- linha 2 -->
                 <li class="titulos-formacao">
                     <h4>Curso</h4>
-                    <h4 style="margin-left:190px;">Código da credencial(se houver)</h4>
+                    <h4 style="margin-left:190px;font-size:12px;">Data de conclusão</h4>
+                    <h4 style="margin-left:85px;font-size:12px;">Código da credencial(se houver)</h4>
                 </li>
                 <li>
-                    <input type="text" name="curso" id="curso">
-                    <input type="text" name="credencial-cur" id="credencial-cur" style="margin-left:25px;width:295px;">
+                    <input type="text" name="curso-cur" id="curso-cur">
+                    <input type="date" name="conclusaoData-cur" id="conclusaoData-cur" style="margin-left:25px;">
+                    <input type="text" name="credencial-cur" id="credencial-cur" style="margin-left:25px;width:220px;">
                 </li>
             </ul>
 
@@ -139,12 +141,12 @@
                 </li>
 
                 <li>
-                    <input style="width:495px;" type="text" name="habilidade" id="">
+                    <input style="width:495px;" type="text" name="habilidade" id="habilidade">
                 </li>
             </ul>
 
             <div class="footer-formacao">
-                <button class="btnConfirma">Confirmar</button>
+                <button class="btnConfirma" onclick="addHabilidade()">Confirmar</button>
             </div>
         </div>
     </div>
@@ -191,7 +193,7 @@
             </ul>
 
             <div class="footer-formacao">
-                <button class="btnConfirma">Confirmar</button>
+                <button class="btnConfirma" onclick="addExperiencia()">Confirmar</button>
             </div>
         </div>
     </div>

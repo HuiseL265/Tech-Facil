@@ -17,17 +17,17 @@ while($cursos = sqlsrv_fetch_array($queryCur,SQLSRV_FETCH_ASSOC)){
     <ul class='cursos'>
             <li>
                 <h5>Formação: </h5>
-                <p>".utf8_encode($cursos['nivelFormacao'])."</p>
+                <p>".$cursos['nivelFormacao']."</p>
             </li>
             
             <li>
                 <h5>Instituição: </h5>
-                <p>".utf8_encode($cursos['Instituicao'])."</p>
+                <p>".$cursos['Instituicao']."</p>
             </li>
 
             <li>
                 <h5>Curso: </h5>
-                <p>".utf8_encode($cursos['Curso'])."</p>
+                <p>".$cursos['Curso']."</p>
             </li>
 
             <li>
@@ -54,6 +54,18 @@ while($cursos = sqlsrv_fetch_array($queryCur,SQLSRV_FETCH_ASSOC)){
                 echo                
                     $cursos['Credencial']."
                 </p>
+            </li>";
+
+
+                $cursos['Instituicao'] = str_replace(" ","_",$cursos['Instituicao']);
+                $cursos['Curso'] = str_replace(" ","_",$cursos['Curso']);
+
+            echo "
+
+            <li>
+                <button class='exc-Curriculo' onclick=excCur(".$cursos['idCurriculo'].",`".$cursos['Instituicao']."`,`".$cursos['Curso']."`)> 
+                    Excluir
+                </button>
             </li>
         </ul>
         ";

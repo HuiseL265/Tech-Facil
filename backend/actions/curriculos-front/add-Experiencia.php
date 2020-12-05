@@ -2,11 +2,11 @@
     require("../SQL Server/connectsql.php");
 
     $userId =  $_POST['userId'];
-    $tipoFormacao = $_POST['tipoFormacao'];
-    $instituicao = $_POST['instituicao'];
-    $curso = $_POST['curso'];
-    $conclusaoData = $_POST['conclusaoData'];
-    $credencial = $_POST['credencial'];
+    $empresa = $_POST['empresa'];
+    $funcao = $_POST['funcao'];
+    $atividades = $_POST['atividades'];
+    $dataEntrega = $_POST['dataEntrada'];
+    $dataSaida = $_POST['dataSaida'];
 
     $params = array();
     $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
@@ -24,8 +24,8 @@
 
     $curriculo = sqlsrv_fetch_array($queryGet,SQLSRV_FETCH_ASSOC);
 
-    if(!sqlsrv_query($con, "INSERT INTO Tb_Cursos (idCurriculo,nivelFormacao,instituicao,curso,conclusaoData,codCertificado) 
-        VALUES($curriculo[idCurriculo], '$tipoFormacao', '$instituicao', '$curso', '$conclusaoData', '$credencial')" )){
+    if(!sqlsrv_query($con, "INSERT INTO Tb_Experiencia (idCurriculo,nomeEmpresa,atividades,funcao,dataEntrada,dataSaida) 
+        VALUES($curriculo[idCurriculo], '$empresa', '$atividades', '$funcao', '$dataEntrega', '$dataSaida')" )){
             //reservado para redirecionar ao perfil com o erro.
         }
 
