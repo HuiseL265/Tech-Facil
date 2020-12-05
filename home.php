@@ -30,6 +30,13 @@
                     </form>
 
                 </div>          
+            <?php }else{ ?>
+
+                <div id="boas-vindas">
+                    <h2>Tech Fácil</h2>
+                    <p>Conectando pessoas, resolvendo problemas.</p>
+                </div>
+
             <?php } ?>
         </div>
 

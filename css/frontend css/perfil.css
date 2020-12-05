@@ -10,13 +10,17 @@ body {
 
 #perfil {
     display: flex;
-    min-height: 100vh;
+    width:800px;
+    height:auto;
+    margin-top:150px;
+    margin:150px auto 150px auto;
+
 }
 
 aside.menu-lateral {
-    position: fixed;
-    height: 100%;
-    background: #15C3D6;
+    height: 370px;
+    background: #f5f5f5;
+    box-shadow: 0px 0px 5px #bdbdbd;
     padding: 10px;
     display: flex;
 
@@ -29,7 +33,7 @@ aside.menu-lateral footer button {
     width: 48px;
     height: 48px;
     border:none;
-    background: #12AFCD;
+    background: #5980ff;
     border-radius:1.6rem;
     cursor: pointer;
 
@@ -51,6 +55,11 @@ aside.menu-lateral footer button {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top:10px;
+}
+
+.options button{
+    margin:5px 0px;
 }
 
 main {
@@ -58,11 +67,20 @@ main {
 }
 
 .conteudo {
-    padding-left: 175px;   
+    padding-left: 70px;   
 }
 
 .informacoes {
     display: flex;
     flex-direction: column;
-    background: green;
+    width:600PX;
+    height:100%;
+    background: rgb(255, 255, 255);
+    box-shadow:0px 0px 5px rgb(148, 148, 148) ;
+
+    padding:10px;
+}
+
+.informacoes p{
+    margin-bottom:10px;
 }

@@ -10,22 +10,29 @@
 }
 
 
-#curriculos-add-cont li{
+#curriculos-add-cont a li{
+    display:flex;
+    align-items: center;
     list-style: none;
     margin-bottom:10px;
-}
+    padding-left:10px;
+    
+    width:200px;
+    height:40px;
+    border-radius:5px;
+    background-color:rgb(47, 80, 151);
 
-#curriculos-add-cont li a{
     font-size: 18px;
     font-stretch: condensed;
     text-transform: capitalize;
     text-decoration: none;
-    color:#000;
+    color:rgb(255, 255, 255);
+
 }
 
-#curriculos-add-cont li a:hover{
-    color:rgb(0, 138, 7);
-    text-decoration: underline;
+#curriculos-add-cont a li:hover{
+    background-color:rgb(47, 151, 47);
+    box-shadow:0px 0px 5px rgb(47, 151, 47);
 }
 
 /*popups*/

@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="css/frontend css/perfil.css" />
     <link rel="stylesheet" href="css/frontend css/main.css" />
+    <link rel="stylesheet" href="css/frontend css/rodape.css" />
+    <link rel="stylesheet" href="css/frontend css/curriculo.css" />
 
   </head>
   <body>
@@ -34,36 +36,41 @@
       </aside>
 
       <main class="conteudo">
-        <div class="informacoes">
-          <b>Email:</b>
-          <p>batata@gmail.com</p>
 
-          <b>Nome:</b>
-          <p>Fulano da Silva</p>
+      <?php
+      $params = array();
+      $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+      $id = $_SESSION['id'];
+          if(!$infoUser = sqlsrv_query($con, "SELECT * FROM Tb_Usuario WHERE idUsuario = $id",$params,$options)){
+            
+            while ($user = sqlsrv_fetch_array($infoUser, SQLSRV_FETCH_ASSOC)){
+              
+              echo "<div class='informacoes'>
+              <b>Email:</b>
+              <p>".$user['idUsuario']."</p>
+    
+              <b>Nome:</b>
+              <p>".$user['Nome']."</p>
+    
+              <b>Email:</b>
+              <p>".$user['Email']."</p>
+    
+              <b>Tipo Usuario:</b>
+              <p>".$user['tipoUsuario']."</p>
+    
+              </div>";
 
-          <b>Epresa:</b>
-          <p>Sla</p>
+            }
 
-          <b>Endereço</b>
-          <p>Rua dos Bobos</p>
-
-          <b>Cidade:</b>
-          <p>São Paulo</p>
-
-          <b>CEP:</b>
-          <p>08963-412</p>
-
-          <b>Estado:</b>
-          <select name="estado" id="estado">
-            <option value=""></option>
-            <option value="SP">São Paulo</option>
-            <option value="MG">Minas Gerais</option>
-          </select>
-
-          <b>Telefone:</b>
-          <p>951669451</p>
-        </div>
+          }
+      
+      ?>
+        
       </main>
+      
     </div>
+
+    <?php include("curriculo.php"); ?>
+    <?php include("rodape.php"); ?>
   </body>
 </html>

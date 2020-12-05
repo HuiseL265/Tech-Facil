@@ -1,35 +1,29 @@
-<!DOCTYPE html >
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="css/frontend css/curriculo.css">
-    <link rel="stylesheet" href="css/frontend css/main.css">
-</head>
-<body>
-
-<?php include("main.php") ?>
-
     <!-- Adicionar Curriculo -->
 
     <ul id="curriculos-add-cont">
-        <li>
-            <a href="javascript:abrir(1)">+ Adicionar Escolaridade</a>
-        </li>
+        <a href="javascript:abrir(1)">
+            <li>
+                + Adicionar Escolaridade
+            </li>
+        </a>
 
-        <li>
-            <a href="javascript:abrir(2)">+ Adicionar Curso</a>
-        </li>
+        <a href="javascript:abrir(2)">
+            <li>
+                + Adicionar Curso
+            </li>
+        </a>
 
-        <li>
-            <a href="javascript:abrir(3)">+ Adicionar Habilidade</a>
-        </li>
+        <a href="javascript:abrir(3)">
+            <li>
+                + Adicionar Habilidade
+            </li>
+        </a>
 
-        <li>
-            <a href="javascript:abrir(4)">+ Adicionar Experiência</a>
-        </li>
+        <a href="javascript:abrir(4)">
+            <li>
+                + Adicionar Experiência
+            </li>
+        </a>
     </ul>
 
     <!--Escolaridade-->
@@ -219,5 +213,3 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/curriculo.js"></script>
-</body>
-</html>
